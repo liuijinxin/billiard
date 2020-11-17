@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'欢迎来到GM管理平台,以下是你的信息' " />
+<p>
+    昵称：<span th:text="${user.nick}" style="color: green"></span>
+    金币：<span th:text="${user.gold}" style="color: gold"></span>
+    钻石：<span th:text="${user.diamond}" style="color: red"></span>
+</p>
+<hr />
+<form action="#" th:action="@{/addItem}"  method="post">
+    <input type="hidden" name="id" th:value="${user.id}"   />
+    <p>道具ID: <input type="text" name="itemId" />
+        数量: <input type="text" name="itemNum" />
+        <input type="submit" value="添加道具" /> </p>
+</form>
+
+<form action="#" th:action="@{/addGold}"  method="post">
+    <input type="hidden" name="id" th:value="${user.id}"   />
+    <p>数量: <input type="text" name="gold" /> <input type="submit" value="添加金币" /> </p>
+</form>
+<form action="#" th:action="@{/addDiamond}"  method="post">
+    <input type="hidden" name="id" th:value="${user.id}"   />
+    <p>模拟充值数量: <input type="text" name="diamond" />元(rmb) <input type="submit" value="充值" /> </p>
+</form>
+
+<form action="#" th:action="@{/share}"  method="post">
+    <input type="hidden" name="id" th:value="${user.id}"   />
+    <p><input type="submit" value="完成一次分享任务" /> </p>
+</form>
+
+<form action="#" th:action="@{/sign}"  method="post">
+    <input type="hidden" name="id" th:value="${user.id}"   />
+    <p><input type="submit" value="完成一次签到任务" /> </p>
+</form>
+
+<form action="#" th:action="@{/play}"  method="post">
+    <input type="hidden" name="id" th:value="${user.id}"   />
+    <p>
+        金币or钻石：
+        <select name="money">
+            <option value="1" selected>金币场</option>
+            <option value="2" >钻石场</option>
+        </select>
+        玩法：
+        <select name="game">
+            <option value="1" selected>经典九球</option>
+            <option value="2" >红球</option>
+            <option value="3" >54张抽牌</option>
+            <option value="4" >15张抽牌</option>
+        </select>
+        场次：
+        <select name="chang">
+            <option value="1" selected>初级场</option>
+            <option value="2" >中级场</option>
+            <option value="3" >高级场</option>
+        </select>
+        输赢：
+        <select name="win">
+            <option value="0" >输</option>
+            <option value="1" selected >赢</option>
+        </select>
+        是否一杆清台：
+        <select name="clearance">
+            <option value="0" selected>否</option>
+            <option value="1" >是</option>
+        </select>
+        <input type="submit" value="完成一场台球任务" />
+    </p>
+</form>
+</body>
+</html>

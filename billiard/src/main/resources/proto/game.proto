@@ -1,0 +1,130 @@
+syntax = "proto3";
+
+option java_package = "com.wangpo.base";
+option java_outer_classname = "GameProto";
+
+//---------------------- L2M,M2L定义 ----------------------\\
+//---------------------- L2M,M2L定义 ----------------------\\
+//---------------------- L2M,M2L定义 ----------------------\\
+//---------------------- L2M,M2L定义 ----------------------\\
+//---------------------- L2M,M2L定义 ----------------------\\
+
+//请求匹配
+message L2M_Match {
+	int32 chang  = 1;
+	GamePlayer gp = 2;
+}
+//请求房间信息
+message L2R_InitRoom {
+	int32 roomNo = 1;
+	int64 playerId = 2;
+}
+//匹配超时
+message M2L_TimeOut{
+	int64 playerId = 1;
+}
+
+
+//---------------------- M2R,R2M定义 ----------------------\\
+//---------------------- M2R,R2M定义 ----------------------\\
+//---------------------- M2R,R2M定义 ----------------------\\
+//---------------------- M2R,R2M定义 ----------------------\\
+//---------------------- M2R,R2M定义 ----------------------\\
+
+message M2R_Match {
+	int32 	 roomNo = 1;//房间ID，有匹配服生成
+	int32 	 chang = 2;//场ID
+	repeated GamePlayer gp =3;
+}
+
+//---------------------- L2R,R2L定义 ----------------------\\
+//---------------------- L2R,R2L定义 ----------------------\\
+//---------------------- L2R,R2L定义 ----------------------\\
+//---------------------- L2R,R2L定义 ----------------------\\
+//---------------------- L2R,R2L定义 ----------------------\\
+
+//匹配成功
+message R2L_MatchOk{
+	int32 roomNo = 1;
+	repeated GamePlayer players = 2;
+}
+
+//房间初始化
+message R2L_RoomInfo {
+	int64 actionPlayer = 1; 	//当前行动玩家
+	int32  roomNo 		= 2; 	//房间号
+	repeated GamePlayer players =3;	//游戏玩家信息
+	repeated Ball balls = 4;
+	int64 requestId = 5;//请求玩家
+	int32 gan = 6;//当前第几杆
+	int32 remainTime=7;//倒计时，秒
+}
+//当前操作玩家
+message R2L_OptPlayer{
+	int64 playerId = 1;
+	repeated int64 ids = 2;
+	int64 requestId = 3;//请求玩家
+}
+//击球列表
+message R2L_BallList {
+	int64 id = 1;
+	int32 bigOrSmall=2;//大小球，1-小球，2-大球
+	// repeated int32 balls = 2;
+}
+//游戏结束
+message R2L_GameOver {
+	SettlePlayer winner = 1;
+	repeated SettlePlayer losers = 2;
+}
+//解散房间
+message R2L_Dismiss {
+	repeated int64 players = 1;
+}
+
+
+//---------------------- 实体类定义 ----------------------\\
+//---------------------- 实体类定义 ----------------------\\
+//---------------------- 实体类定义 ----------------------\\
+//---------------------- 实体类定义 ----------------------\\
+//---------------------- 实体类定义 ----------------------\\
+//---------------------- 实体类定义 ----------------------\\
+
+message SettlePlayer {
+	int64 playerId = 1;
+	string head  = 2;
+	string nick = 3;
+	int32 exp = 4;
+	int32 gold = 5; //输赢金币
+}
+
+message Ball {
+	int32 number = 1;
+	double x = 2;
+	double y = 3;
+}
+
+message GamePlayer{
+	int64 playerId = 1;
+	string nick = 2;
+	string head = 3;
+	int32  chang = 4;//场次id
+	int32  fight = 5;//场次战力
+	repeated int64 fightIdList = 6;//最近对阵三个玩家ID列表
+	repeated int32 balls=7;
+}
+
+message HostUrl {
+	string hostUrl = 1;
+ }
+
+ message RoomOpt {
+ 	int64 playerId = 2;
+ 	int32 roomNo = 1;
+ }
+
+message C2S_Message{
+	int32 roomNo = 1;
+	int64 playerId =2;
+	string json = 3;//客户端传送的json
+	repeated int64 players=4;//房间内的玩家
+}

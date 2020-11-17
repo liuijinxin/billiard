@@ -1,0 +1,434 @@
+syntax = "proto3";
+
+option java_package = "com.wangpo.base.bean";
+option java_outer_classname = "PlatFormProto";
+
+
+/**
+登录协议Start
+ */
+message C2S_Login{//登录
+  int32 loginType = 4;//登录类型，0-模拟登录,1-通过微信code登录，2-通过微信openid登录
+  string code = 3;        //token：0-模拟token，1，微信code，2微信openid
+  string origin = 2;  //渠道
+  int32  device = 1; //登录设备，1-web，2-native
+  int32  parentId= 5;//分享人id
+}
+
+message S2C_Login {
+  int64  id = 1;
+  string  nick = 2;
+  string  head = 3;
+  int32  gold = 4;
+  int32   diamond = 5;
+  int32   level = 6;
+  int32  levelExp = 7;
+  int32  levelNeedExp = 8;
+  string token = 9;//微信token，客户端保存
+  int32 redPacket = 10;
+  string nociveGuideNum = 11;//新手引导第几步
+}
+
+message C2S_Heart {
+  int64 sequence = 1;//序列号
+}
+/**
+登录协议End
+ */
+
+
+message S2C_UpdateGold{           // 更新金币
+  int32 id = 1;
+  int32 gold = 2;
+}
+
+message S2C_UpdateDiamond{       // 更新钻石
+  int32 id = 1;
+  int32 diamond = 2;
+}
+
+message S2C_UpdateRedPacket{       // 更新红包券
+  int32 id = 1;
+  int32 redPacket = 2;
+}
+
+/**
+  任务系统相关协议Start
+ */
+message C2S_GetTask {
+  int32   taskType = 1;//1每日任务，2每周任务，3成长任务
+}
+
+message C2S_GetTaskReward { //领取任务奖励
+  int32   id = 1; //1-任务ID
+}
+
+message C2S_GetActiveReward {//领取活跃度奖励
+  int32   taskType = 1;
+  int32   active = 2;
+}
+
+message S2C_ActiveAward {//推送活跃度奖励
+  int32 taskType = 1;
+  int32  active = 2;
+  int32 activeStatus = 3;
+  repeated Award awards = 4;
+}
+
+message S2C_Award {   //服务端推送奖励
+  int32 id = 1;
+  int32 taskType = 2;
+  int32  active = 3;
+  repeated Award awards = 4;
+}
+
+message S2C_NewTask {  //服务端推送新任务
+  PlayerTask task = 1;
+}
+
+
+message S2C_Task {    //返回任务列表
+  int32 id = 1;//玩家ID
+  int32 active = 2;//活跃度
+  int32 activeStatus = 3;
+  repeated PlayerTask tasks = 4;
+}
+
+message S2C_UpdateTask {
+  int32 id = 1;//玩家ID
+  PlayerTask task = 2;//任务列表
+}
+
+message PlayerTask {
+  int32   id = 1;//任务唯一ID
+  int32   taskId = 2;//任务配置ID
+  int32   taskType = 3;
+  int32   state = 4;//0-未完成，1-已完成，2-已领取奖励
+  repeated TaskCondition conditions = 5;//条件列表
+}
+
+message TaskCondition{
+  int32 conditionId = 1; //条件ID
+  int32 progress = 2;//进度
+  int32 totalProgress = 3;//总进度
+}
+
+message Award { //奖励
+  int32 id=1;//奖励ID
+  int32 num=2;//奖励数量
+}
+/**
+  任务系统相关协议End
+ */
+
+/**
+  会员协议Start
+ */
+message C2S_Member_Award { //会员每日奖励
+  int32 level = 1;
+}
+
+message S2C_Member_Award { //会员每日奖励
+  int32 dayGift = 1;
+  repeated Award award = 2;
+}
+
+message S2C_Member_Upgrade { //会员升级
+  int32 points = 1;
+}
+
+message S2C_Member_info {//获取会员信息
+  int32 points = 1;
+  int32 dayGift = 2;//每日奖励领取状态
+  int32 levelGift = 3;//会员升级奖励状态
+}
+
+message C2S_Member_Level {//领取升级奖励
+  int32 level = 1;
+}
+
+message S2C_Member_Level {//领取升级奖励
+  int32 levelGift = 1;
+  repeated Award award = 2;
+}
+
+/**
+  会员协议End
+ */
+
+/**
+  红包墙协议Start
+ */
+message C2S_DrawLottery {
+  int32 chang = 1;//抽奖场次，1-初级，2-中级，3-高级，4-比赛，5-大奖
+}
+
+message C2S_GetRedPacket{   //获取红包墙信息，获取的时候不需要传参数
+  repeated RedPacket redPackets=1;
+}
+
+message S2C_AddRedPacket{ //新增红包墙
+  RedPacket redPacket = 1;
+}
+
+message RedPacket{
+  int32  id = 5;//玩家id
+  string nick = 1;//玩家昵称
+  int32  vip = 2;//vip等级
+  int32  num = 3;//红包数量
+  int64  time = 4;//时间戳
+}
+/**
+  红包墙协议End
+ */
+
+/**
+  邮件协议Start
+ */
+message C2S_GetMail { //获取邮件列表
+  repeated Mail mails = 1;
+}
+
+message C2S_MailAward{  //领取邮件奖励
+  int32 mailId = 1;// 提取奖励的邮件ID，为0代表全部提取
+}
+
+message S2C_NewMail { //新邮件通知
+  Mail mail = 1;
+}
+
+message Mail {  //邮件对象
+  int64 mailId = 1;
+  string title = 2;
+  string content = 3;
+  int32 mailState = 5;//邮件状态，0-未读，1-已读未领取,2-已读已领取
+  int64 time = 6;//到期时间
+  repeated Award awards = 4;
+}
+/**
+  邮件协议End
+ */
+
+/**
+ 签到协议Start
+ */
+ message C2S_SignInfo {//请求签到信息218
+
+}
+
+message S2C_SignIfo {//签到信息返回
+  int32 signDayCount = 1;//签到总天数
+  bool signStatus = 2;//签到状态
+  repeated signAward awards = 3;//签到道具奖励
+}
+
+message C2S_Sign {//签到217
+
+}
+
+message S2C_Sign {//签到返回
+  repeated Award awards = 1;
+}
+
+message signAward {//签到信息
+  int32 signDay = 1;//签到天数
+  int64 gold = 2;//金币
+  int64 diamond = 3;//钻石
+  repeated Award awards = 4;//签到奖励
+}
+/**
+  签到协议End
+ */
+ /**
+  支付Start
+ */
+message C2S_PayInfo {//获取支付信息219
+
+}
+ 
+message S2C_PayInfo {//返回支付信息219
+  repeated PayInfo payInfo = 1;//支付渠道信息
+}
+
+message PayInfo {//返回支付信息219
+ int32 payType = 1;//支付方式1：支付宝2：微信支付3：银联支付，4：创游人支付宝5：创游人微信
+ int32 method = 2;//1：原生支付2：h5支付3：小程序支付
+ bool preferred = 3;//是否首选
+}
+
+message C2S_BuyGoods {//购买商品220
+ int32 id = 1;//商品Id
+ int32 payType = 2;//支付方式
+}
+
+message S2C_BuyGoods {//返回购买商品220
+ int32 id = 1;//商品Id
+ string body = 2;//支付信息
+ string outTradeNo = 3;//订单号
+ int32 payType = 4;//支付类型
+}
+
+message S2C_BuyGoodsEnd {//返回购买商品结束221
+ int32 id = 1;//商品Id
+}
+ /**
+  支付End
+ */
+ 
+ /**
+  红包Start
+ */
+message C2S_AliInfo {//请求支付宝信息222
+}
+
+message S2C_AliInfo {//返回支付宝信息222
+  repeated AliInfo aliInfo = 1;//支付渠道信息
+  int64 phone = 2;//手机号
+}
+
+message AliInfo {//支付宝信息
+ string aliAccount = 1;//支付宝账号
+ string aliName = 2;//姓名
+}
+
+message C2S_WxOpenIdInfo {//请求微信公众号信息224
+}
+
+message S2C_WxOpenIdInfo {//返回微信公众号信息
+ int32 subscribe = 1;//是否关注 0未关注，1关注
+ string phone = 2;//手机号
+}
+
+message C2S_RedPackage {//请求兑换红包223
+ int32 id = 1;//商品Id
+ string aliAccount = 2;//支付宝账号
+ string aliName = 3;//姓名
+}
+
+message S2C_RedPackage {//返回兑换红包223
+ int32 id = 1;//商品Id
+}
+
+message C2S_BingdingPhone {//请求绑定手机号225
+ string phone = 1;//手机号
+}
+
+message C2S_PhoneCode {//请求手机绑定验证码226
+ string poneCode = 1;//手机号
+}
+
+message S2C_PhoneCodeSuccess {//返回手机绑定验证码
+ int32 success = 1;//绑定是否成功0成功1失败
+}
+
+ /**
+  红包End
+ */
+ 
+ /**
+ 实名制Start
+ */
+message C2S_PushAuthentication {//227
+}
+ 
+message S2C_PushAuthentication {//推送实名认证227====>或将修改为进入游戏后的所有推送
+ int32 Authentication = 1;//实名认证0未认证1已认证
+ int32 firstCharge = 2;//永久首充礼包
+ int32 everyDayFirstCharge = 3;//每日首充礼包
+ int32 monCard = 4;//月卡0未激活1激活2禁用
+ int32 resurrection = 5;//每日复活礼包0未激活1激活2禁用
+ int64 monCardTime = 6;//月卡剩余时间
+ int64 resurrectionTime = 7;//复活剩余时间
+ int32 weekCard = 8;//周卡状态0未激活1激活2禁用
+ int32 luckyRod = 9;//幸运一杆0未激活1激活2禁用
+ string activityInfo = 10;//活动信息
+ repeated int32 shopBuyNum = 11;//限购商品id
+}
+ 
+message C2S_Authentication {//请求实名认证228
+ string name = 1;//姓名
+ string idCard = 2;//身份证号
+}
+
+message S2C_Authentication {//返回实名认证
+ int32 success = 1;//绑定是否成功0成功1失败
+}
+/**
+  实名制End
+ */
+
+/**
+  游戏公告Start
+*/
+message S2C_SystemNotice {
+  repeated SystemNotice notices = 1;
+}
+message SystemNotice {
+  string cnTitle =1;  //中文标题
+  string wyTitle =2; //维语标题
+  string cnContent = 3; //内容图片地址
+  string wyContent = 4; //内容图片地址
+  int32   force = 5;//是否强制弹出，0-否，1-是
+  int32   order = 6;//排序
+}
+/**
+  游戏公告End
+*/
+
+/**
+  系统公告Start
+*/
+message S2C_SystemTip {
+  repeated SystemTip notices = 1;
+}
+message SystemTip {
+  string cnTitle =1;  //中文标题
+  string wyTitle =2; //维语标题
+  string cnContent = 3; //中文内容
+  string wyContent = 4; //维语内容
+}
+/**
+  系统公告End
+*/
+
+/**
+  礼包Start
+*/
+message C2S_MonCardGiftBag {//每日月卡礼包领取232
+ int32 goodsId = 1;//商品Id
+}
+
+message S2C_MonCardGiftBag {//返回每日月卡礼包领取
+  repeated Award awards = 1;//奖励列表
+  int32 goodsId = 2;//商品Id
+}
+
+message C2S_ResurrectionNum {//请求复活次数233
+ int32 roomNum = 1;//房间场次
+}
+
+message S2C_ResurrectionNum{//返回复活次数
+ int32 num = 1;//复活次数
+}
+
+message C2S_ResurrectionGiftBag {//每日复活礼包领取234
+ int32 roomNum = 1;//房间场次
+}
+
+message S2C_PushAward {//进入游戏推送月卡奖励235
+ repeated Award awards = 1;//奖励列表
+ int32 goodsId = 2;//商品Id
+}
+
+
+/**
+  礼包End
+*/
+
+
+/**
+  新手引导start
+*/
+message C2S_UpdateGuide {//更新目前第几步
+string num = 1;//进行到第几步
+}

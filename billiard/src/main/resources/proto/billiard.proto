@@ -1,0 +1,444 @@
+syntax = "proto3";
+
+option java_package = "com.wangpo.base.bean";
+option java_outer_classname = "BilliardProto";
+
+
+//---------------------- C2S定义开始  ----------------\\
+//-----------------------------------------------------\\
+//-------------------------------------------------------\\
+
+//==========  个人信息协议  ==========\\
+message C2S_BilliardInfo {  //获取台球场次个人信息
+  repeated BilliardInfo billiardInfos=1;
+}
+
+message BilliardInfo{
+  int32 chang = 5;//场次id，1-经典8球，2-红球，3-抽牌
+  int32 total = 1; //总场次
+  int32 win = 2;  //胜利场次
+  int32 streak = 3; //连胜次数
+  int32 run = 4;//逃跑次数
+}
+
+message C2S_Match{//请求匹配
+  int32 gameId = 1;         //玩法id，1-经典九球，2-红球玩法，3-抽牌玩法
+  int32 changId = 2;        //场次ID，1-初级场，2-中级场，3-高级场
+  int32 moneyId = 3;        //1=金币场，2-钻石场
+}
+
+message C2S_EnterRoom {//请求房间信息
+}
+
+message C2S_CueMove {//球杆移动
+  int32  playerID = 1;
+  Vec3  angle = 2;
+  Vec3  position = 3;
+}
+
+message C2S_Batting {//击球
+  int32  playerID = 1;
+  double  angle = 2;
+  double  powerScale = 3;
+  Vec3  velocity = 4;
+  Vec3  force = 5;
+  Vec2  contactPoint = 6;    //加塞角度，默认(0,0)
+  double  gasserAngle = 7;    //加塞值：默认0
+  Vec2  hitPoint = 8;
+  double hitAngle = 9;
+}
+
+message C2S_Snooker {//台球落袋
+  int32  playerID = 2;
+  repeated int32 numbers = 1;
+  int32 pos = 3;//球袋位置：1到6
+}
+
+message C2S_SyncDesk {//同步球桌信息
+  repeated GameBall pockets = 1;
+}
+
+message C2S_SyncPos {//保留协议
+  int32 playerID = 2;
+  repeated BallMove ballMoves = 1;
+}
+
+message C2S_SyncPos2 {//台球静止后，客户端同步位置
+  int32 hitFirstBall = 1; //
+  repeated GameBall balls = 2;
+  int32  playerID = 3;
+  int32  gan = 4;
+  int32  hitKu = 5;//是否碰库，0-否，1-是。
+}
+
+message C2S_LayBall {//玩家摆白球
+  int64  playerID = 1;
+  Vec3  position = 2;
+  int32 dropStatus = 3;
+  Vec4  angle = 4;
+  Vec3  body = 5;
+}
+
+message C2S_NewRound {//再来一局
+  int32 id = 1;
+}
+
+message C2S_ExitRoom {//离开房间，返回大厅
+  int32 id = 1;
+}
+
+
+message C2S_ReqDouble{
+  int32 playerID = 1;//玩家ID
+}
+
+message C2S_RespDouble {
+  int32 playerID = 1;//
+  int32 flag = 2;//1-同意，2-反对
+}
+
+
+//球杆协议
+//------------C2S------------
+message C2S_MyCue {//我的球杆
+  int32 playerID = 1;
+}
+
+message C2S_BuyCue {//购买球杆
+  int32 playerID = 1;
+  int32 cueID = 2;
+}
+
+message C2S_SellCue {//出售球杆
+  int32 playerID = 1;
+  int32 id = 2;
+}
+
+message C2S_UpgradeCue {//升级球杆
+  int32 playerID = 1;
+  int32 id = 2;
+}
+
+message C2S_UseCue {//使用球杆
+  int32 playerID = 1;
+  int32 id = 2;
+}
+
+message C2S_AllCue {//查看所有球杆
+  int32 playerID = 1;
+}
+
+message C2S_DefendCue {//维护球杆
+  int32 playerId = 1;
+  int32 id = 2;
+  int32 defendType = 3;//1、维护30次，2、维护3天，3、维护7天，4、维护30天，5、维护365天
+}
+
+message C2S_AllItem {//获取道具
+
+}
+
+//==========  配置协议  ==========\\
+message C2S_GetConfig {//获取excel配置数据
+  int32   configType = 1;//配置类型
+}
+
+//==========  台球服奖励  ==========\\
+message S2C_BilliardAward {
+  repeated Item items=1;
+}
+
+//==========  台球服表情  ==========\\
+message C2S_Chat {
+  string emoji = 1;//表情id
+}
+
+message S2C_Chat{
+  int32 id = 1;//发送表情的玩家ID
+  string emoji = 2;//表情id
+}
+
+//---------------------- S2C定义开始  ----------------\\
+//-----------------------------------------------------\\
+//-------------------------------------------------------\\
+
+
+
+
+message S2C_OptPlayer {//当前操作玩家
+  int64 id = 1;
+  int64 endTime = 2;    //倒计时结束时间戳
+  int32 gan = 3;//当前杆
+  int32 layBall = 4;//是否可以摆球，0-否，>0 -是
+}
+
+message S2C_MatchOK {//匹配成功
+  repeated MatchPlayer matchPlayers = 1;
+}
+
+message S2C_RoomInfo {//房间初始化
+  int32  optPlayer = 1;
+  int32  roomNo = 2;
+  int32  gan = 3;
+  int32  remainTime = 4;
+  int32  changId = 5;
+  repeated GamePlayer players = 6;
+  repeated GameBall balls = 7;
+  repeated int32 cards = 8; //抽牌
+  C2S_Batting proto = 9;
+  int32   doubleNum = 10;//加倍倍数
+  int32 divide = 11;//是否已经分球：0-未分球，1-分球
+  repeated int32 snookerList = 12;//进袋的球，按进袋顺序
+}
+
+message S2C_MatchTimeOut {//匹配超时
+}
+
+message S2C_BigSmall {//玩家大小球归属
+  int32  bigOrSmall = 1;      //大小球：1-小球，2-大球
+}
+
+message S2C_GameSettle {//游戏结算
+  int32 code = 1;//结束原因，1-自然结束，2-多次犯规结束,3-黑八进袋结束
+  repeated GameSettlePlayer winner = 2;  //胜利者
+  repeated GameSettlePlayer losers = 3;  //失败者
+}
+
+message S2C_Foul {//犯规：1107
+  int32 foul = 1;          //1-空杆，2-碰到别人的球，3-白球进洞
+  int32 playerID = 2;        //玩家id
+  int32 repeatFoul = 3;//连续犯规次数
+}
+
+message S2C_Frame {//帧同步
+  int64  frame = 1;
+  double  interval = 2;
+}
+
+//游戏中切换球杆
+message S2C_ChangeCue{
+  int32 playerId = 1;
+  int32 cueId = 2;//切换的球杆ID
+}
+
+//==========  球杆协议  ==========\\
+message S2C_MyCue {//我的球杆
+  repeated PlayerCue playerCue = 1;
+}
+
+message S2C_BuyCue {//购买球杆
+  PlayerCue playerCue = 1;
+}
+
+message S2C_SellCue {//出售球杆
+  int32 id = 1;
+}
+
+message S2C_UpgradeCue {//升级球杆
+  PlayerCue playerCue = 1;
+}
+
+message S2C_UseCue {//使用球杆
+  int32 id = 1;
+}
+
+message S2C_AllCue {//查看所有球杆
+  repeated PlayerCue playerCue = 1;
+}
+
+message S2C_DefendCue{//维护球杆
+  PlayerCue playerCue = 1;
+}
+
+message S2C_AllItem {//获取所有道具
+  repeated Item item = 1;
+}
+
+message S2C_updateItem {//更新道具
+  Item item = 1;
+}
+
+message S2C_Notice {//跑马灯
+  string body = 1;
+}
+
+//==========  角色协议  ==========\\
+message C2S_getRole { //获取角色
+
+}
+
+message C2S_UseRole { //使用角色
+  int32 id = 1; //角色唯一id
+}
+
+message S2C_getRole { //获取角色
+  repeated Role role = 1;
+}
+
+message S2C_UseRole { //使用角色
+  int32 id = 1; //角色唯一id
+}
+
+message S2C_updateRole { //更新角色信息
+  Role role = 1;
+}
+
+
+//==========  抽牌协议  ==========\\
+message S2C_DrawCard {
+  repeated int32 cards = 1;
+}
+
+//==========  配置协议  ==========\\
+message S2C_GetConfig {//获取excel配置数据
+  int32   configType = 1;//配置类型
+  string        body = 2;//
+}
+
+//==========  抽奖协议  ==========\\
+message C2S_Lottery { //抽奖
+  int32 chang = 1;//场次ID，1011-金币初级场经典九球
+}
+
+message S2C_LotteryAward{ //推送奖励
+  LotteryItem lotteryItem = 1;//抽中的奖励
+  repeated LotteryItem lotteryItems = 2;  //奖励列表
+}
+
+message S2C_GameTimes{  //推送游戏次数
+  repeated GameTime gameTimes = 1;
+}
+
+//==========  幸运一杆协议  ==========\\
+message C2S_LuckyCueOpt {
+  //击球即扣次数
+  int32 luckyType = 1;//类型1-免费，2-vip
+}
+
+message C2S_Lucky {
+  int32 luckyType = 1;//类型1-免费，2-vip
+  int32 result = 2;//打中的环，由外到内，1-2-3-4
+}
+message S2C_LuckCue{
+  int32 freeTimes=1; //免费次数
+  int32 vipTimes = 2;//vip次数
+  int64 remainTime = 3;//免费剩余时间
+  int32 level = 4;//当前等级
+  int32 freeFlag = 5;//当前等级已经免费领奖的标识，1+2+4 根据环按位与
+  int32 vipFlag = 6;//当前等级已经vip领奖的标识，1+2+4+8 根据环按位与
+}
+
+//---------------------- 实体类定义开始  -------------\\
+//-----------------------------------------------------\\
+//-------------------------------------------------------\\
+
+message BallMove{
+  string id = 1;
+  Vec3  p = 2;
+  Vec3  q = 3;
+}
+
+message GameBall{
+  int32 id = 1;
+  Vec3  position = 2;
+  Vec4  angle = 3;
+  Vec3  body = 4;
+}
+
+message Vec2{
+  double x = 1;
+  double y = 2;
+}
+
+message Vec3{
+  double x = 1;
+  double y = 2;
+  double z = 3;
+}
+
+message Vec4{
+  double x = 1;
+  double y = 2;
+  double z = 3;
+  double w = 4;
+}
+
+message GamePlayer {//游戏玩家信息
+  int32  id = 1;
+  string  nick = 2;
+  string  head = 3;
+  int32  roleId = 9;
+  int32  changId = 4;
+  int32   cueId = 5;//球杆id
+  repeated int32 balls = 6;
+  repeated int32 cards = 7; //抽牌
+  int32   winNum = 8;
+  int32   foul = 10;//犯规次数
+  int32   manyCue = 11;//多连击，0-没有
+  int32   exp = 12; //玩家经验
+}
+
+message MatchPlayer{//匹配玩家信息
+  int64 id = 1;
+  string head = 2;
+  string nick = 3;
+}
+
+message GameSettlePlayer{//结算玩家信息
+  int64 id = 1;
+  int32 exp = 2;
+  int32 moneyType = 3;//1-金币,2-钻石
+  int32 money = 4; //输赢数量
+  string head = 5;
+  string nick = 6;
+  repeated int32 cards = 7;//抽中的牌
+  repeated int32 needCards = 8;//未进的球
+}
+
+
+//------------实体类------------
+message PlayerCue {//球杆
+  int32 id = 1;
+  int32 playerID = 2;
+  int32 cueID = 3;
+  int32 grade = 4;
+  int64 damageTime = 5;
+  int32 isUse = 6;
+  int32 defendTimes = 7;
+  int64 defendDay = 8;
+}
+
+message LotteryItem {//抽奖奖励道具
+  int32 id = 1;
+  int32 num = 2;
+  int32 grade = 3; //等级
+}
+
+message Item {//道具
+  int32 id = 1;
+  int32 num = 2;
+}
+
+message Role { //角色
+  int32 id = 1;
+  int32 roleId = 2;
+  int32 playerId = 3;
+  int32 isUse = 4;
+  int32 exp = 5;
+}
+
+message GameTime{
+  int32 chang = 1;//场次id，四位整数
+  int32 times = 2;//场次游戏次数
+}
+
+message C2S_NoviceGuideMatch{//请求新手引导匹配1171
+  int32 gameId = 1;         //玩法id，1-经典九球，2-红球玩法，3-抽牌玩法
+  int32 changId = 2;        //场次ID，1-初级场，2-中级场，3-高级场
+  int32 moneyId = 3;        //1=金币场，2-钻石场
+}
+
+message C2S_NoviceGuideLottery { //抽奖1172
+  int32 chang = 1;//场次ID，1011-金币初级场经典九球
+}
+ 

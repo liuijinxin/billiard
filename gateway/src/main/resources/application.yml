@@ -1,0 +1,15 @@
+server:
+    port: 7007
+    websocket: 9090
+spring:
+    application:
+        name: gateway
+dubbo:
+    application:
+        name: gateway
+    registry:
+        address: 127.0.0.1:2181
+        protocol: zookeeper
+    protocol:
+        name: dubbo
+        port: 20881
