@@ -1,0 +1,1408 @@
+/*
+SQLyog Ultimate v13.1.1 (64 bit)
+MySQL - 8.0.22 : Database - game
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`game` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+USE `game`;
+
+/*Table structure for table `billiard_log` */
+
+DROP TABLE IF EXISTS `billiard_log`;
+
+CREATE TABLE `billiard_log` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=2967 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log` */
+
+/*Table structure for table `billiard_log_202011` */
+
+DROP TABLE IF EXISTS `billiard_log_202011`;
+
+CREATE TABLE `billiard_log_202011` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202011` */
+
+/*Table structure for table `billiard_log_202012` */
+
+DROP TABLE IF EXISTS `billiard_log_202012`;
+
+CREATE TABLE `billiard_log_202012` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202012` */
+
+/*Table structure for table `billiard_log_202101` */
+
+DROP TABLE IF EXISTS `billiard_log_202101`;
+
+CREATE TABLE `billiard_log_202101` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202101` */
+
+/*Table structure for table `billiard_log_202102` */
+
+DROP TABLE IF EXISTS `billiard_log_202102`;
+
+CREATE TABLE `billiard_log_202102` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202102` */
+
+/*Table structure for table `billiard_log_202103` */
+
+DROP TABLE IF EXISTS `billiard_log_202103`;
+
+CREATE TABLE `billiard_log_202103` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202103` */
+
+/*Table structure for table `billiard_log_202104` */
+
+DROP TABLE IF EXISTS `billiard_log_202104`;
+
+CREATE TABLE `billiard_log_202104` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202104` */
+
+/*Table structure for table `billiard_log_202105` */
+
+DROP TABLE IF EXISTS `billiard_log_202105`;
+
+CREATE TABLE `billiard_log_202105` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202105` */
+
+/*Table structure for table `billiard_log_202106` */
+
+DROP TABLE IF EXISTS `billiard_log_202106`;
+
+CREATE TABLE `billiard_log_202106` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202106` */
+
+/*Table structure for table `billiard_log_202107` */
+
+DROP TABLE IF EXISTS `billiard_log_202107`;
+
+CREATE TABLE `billiard_log_202107` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202107` */
+
+/*Table structure for table `billiard_log_202108` */
+
+DROP TABLE IF EXISTS `billiard_log_202108`;
+
+CREATE TABLE `billiard_log_202108` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `billiard_log_202108` */
+
+/*Table structure for table `billiard_log_202109` */
+
+DROP TABLE IF EXISTS `billiard_log_202109`;
+
+CREATE TABLE `billiard_log_202109` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `billiard_log_202109` */
+
+/*Table structure for table `billiard_log_202110` */
+
+DROP TABLE IF EXISTS `billiard_log_202110`;
+
+CREATE TABLE `billiard_log_202110` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `room_no` int DEFAULT NULL COMMENT '房间号',
+  `chang` int DEFAULT NULL COMMENT '场次编号',
+  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+  `money_type` int DEFAULT NULL COMMENT '货币类型',
+  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+  `fee` int DEFAULT NULL COMMENT '总台费',
+  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+/*Data for the table `billiard_log_202110` */
+
+/*Table structure for table `chang_config` */
+
+DROP TABLE IF EXISTS `chang_config`;
+
+CREATE TABLE `chang_config` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `chang` int DEFAULT NULL COMMENT '场次ID',
+  `chang_desc` varchar(50) DEFAULT NULL COMMENT '场次说明',
+  `ai_open` int DEFAULT NULL COMMENT 'ai开关，0-关闭1-开启',
+  `strong_rate` int DEFAULT NULL COMMENT '强AI概率，0-100，对应弱AI概率为100-强ai概率',
+  `up_limit` int DEFAULT NULL COMMENT '抽奖上限',
+  `down_limit` int DEFAULT NULL COMMENT '抽奖下线',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `chang_config` */
+
+insert  into `chang_config`(`id`,`chang`,`chang_desc`,`ai_open`,`strong_rate`,`up_limit`,`down_limit`) values 
+(7,1011,'经典九球金币初级场',1,30,10,15),
+(8,1012,'经典九球金币中级场',1,95,40,40),
+(13,1021,'红球金币初级场',1,50,11,11),
+(14,1022,'红球金币中级场',1,95,40,40),
+(15,1032,'金币中级15抽牌',0,100,28,28),
+(16,1042,'金币中级54抽牌',0,100,28,28);
+
+/*Table structure for table `lottery_config` */
+
+DROP TABLE IF EXISTS `lottery_config`;
+
+CREATE TABLE `lottery_config` (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT '奖项id',
+  `chang` int DEFAULT NULL COMMENT '场次',
+  `name` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '奖项名称',
+  `num` int DEFAULT NULL COMMENT '数量',
+  `type` int DEFAULT NULL COMMENT '奖项类型',
+  `weight` int DEFAULT NULL COMMENT '奖金权重',
+  `grade` int DEFAULT NULL COMMENT '奖励等级',
+  `update_time` datetime DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=195 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `lottery_config` */
+
+insert  into `lottery_config`(`id`,`chang`,`name`,`num`,`type`,`weight`,`grade`,`update_time`,`create_time`) values 
+(1,1011,'一等奖',1,7,10,4,'2020-09-24 16:17:02','2020-09-23 19:14:59'),
+(2,1011,'二等奖',4,7,12,3,'2020-09-24 16:17:16','2020-09-23 19:14:59'),
+(3,1011,'三等奖',10,7,13,2,'2020-09-24 16:17:27','2020-09-23 19:14:59'),
+(4,1011,'四等奖',25,7,15,1,'2020-09-24 16:17:43','2020-09-23 19:14:59'),
+(5,1011,'五等奖',5,2,10,1,'2020-09-24 16:18:01','2020-09-23 19:14:59'),
+(6,1011,'六等奖',15,2,15,1,'2020-09-24 16:18:13','2020-09-23 19:14:59'),
+(7,1011,'七等奖',5,1,5,1,'2020-09-24 16:18:35','2020-09-23 19:14:59'),
+(8,1011,'八等奖',15,1,5,1,'2020-09-24 16:18:40','2020-09-23 19:14:59'),
+(9,1011,'九等奖',5,3001,5,1,'2020-09-24 16:19:06','2020-09-23 19:14:59'),
+(10,1011,'十等奖',15,3001,10,1,'2020-09-24 16:19:29','2020-09-23 19:14:59'),
+(11,1012,'一等奖',1,7,10,4,'2020-09-24 16:22:54','2020-09-23 19:14:59'),
+(12,1012,'二等奖',4,7,12,3,'2020-09-24 16:23:25','2020-09-23 19:14:59'),
+(13,1012,'三等奖',10,7,13,2,'2020-09-24 16:23:34','2020-09-23 19:14:59'),
+(14,1012,'四等奖',25,7,15,1,'2020-09-24 16:23:49','2020-09-23 19:14:59'),
+(15,1012,'五等奖',5,2,10,1,'2020-09-24 16:24:18','2020-09-23 19:14:59'),
+(16,1012,'六等奖',15,2,15,1,'2020-09-24 16:24:30','2020-09-23 19:14:59'),
+(17,1012,'七等奖',5,1,5,1,'2020-09-24 16:24:41','2020-09-23 19:14:59'),
+(18,1012,'八等奖',15,1,5,1,'2020-09-24 16:24:57','2020-09-23 19:14:59'),
+(19,1012,'九等奖',5,3001,5,1,'2020-09-24 16:25:11','2020-09-23 19:14:59'),
+(20,1012,'十等奖',15,3001,10,1,'2020-09-24 16:25:30','2020-09-23 19:14:59'),
+(22,1013,'二等奖',4,7,10,3,NULL,'2020-09-23 19:29:12'),
+(23,1013,'三等奖',10,7,20,2,NULL,'2020-09-23 19:29:12'),
+(24,1013,'四等奖',10,7,15,1,NULL,'2020-09-23 19:29:12'),
+(25,1013,'五等奖',10,7,10,1,NULL,'2020-09-23 19:29:12'),
+(26,1013,'六等奖',10,2,10,1,NULL,'2020-09-23 19:29:12'),
+(27,1013,'七等奖',10,2,5,1,NULL,'2020-09-23 19:29:12'),
+(28,1013,'八等奖',15,2,5,1,NULL,'2020-09-23 19:29:12'),
+(29,1013,'九等奖',15,2,5,1,NULL,'2020-09-23 19:29:12'),
+(30,1013,'十等奖',15,1,5,1,NULL,'2020-09-23 19:29:12'),
+(31,2011,'一等奖',1,7,15,4,NULL,'2020-09-23 19:19:28'),
+(32,2011,'二等奖',4,7,10,3,NULL,'2020-09-23 19:19:28'),
+(33,2011,'三等奖',10,7,20,2,NULL,'2020-09-23 19:19:28'),
+(34,2011,'四等奖',10,7,15,1,NULL,'2020-09-23 19:19:28'),
+(35,2011,'五等奖',10,7,10,1,NULL,'2020-09-23 19:19:28'),
+(36,2011,'六等奖',10,2,10,1,NULL,'2020-09-23 19:19:28'),
+(37,2011,'七等奖',10,2,5,1,NULL,'2020-09-23 19:19:28'),
+(38,2011,'八等奖',15,2,5,1,NULL,'2020-09-23 19:19:28'),
+(39,2011,'九等奖',15,2,5,1,NULL,'2020-09-23 19:19:28'),
+(40,2011,'十等奖',15,1,5,1,NULL,'2020-09-23 19:19:28'),
+(41,2012,'一等奖',1,7,15,4,NULL,'2020-09-23 19:19:28'),
+(42,2012,'二等奖',4,7,10,3,NULL,'2020-09-23 19:19:28'),
+(43,2012,'三等奖',10,7,20,2,NULL,'2020-09-23 19:19:28'),
+(44,2012,'四等奖',10,7,15,1,NULL,'2020-09-23 19:19:28'),
+(45,2012,'五等奖',10,7,10,1,NULL,'2020-09-23 19:19:28'),
+(46,2012,'六等奖',10,2,10,1,NULL,'2020-09-23 19:19:28'),
+(47,2012,'七等奖',10,2,5,1,NULL,'2020-09-23 19:19:28'),
+(48,2012,'八等奖',15,2,5,1,NULL,'2020-09-23 19:19:28'),
+(49,2012,'九等奖',15,2,5,1,NULL,'2020-09-23 19:19:28'),
+(50,2012,'十等奖',15,1,5,1,NULL,'2020-09-23 19:19:28'),
+(51,2013,'一等奖',1,7,15,4,NULL,'2020-09-23 19:19:28'),
+(52,2013,'二等奖',4,7,10,3,NULL,'2020-09-23 19:19:28'),
+(53,2013,'三等奖',10,7,20,2,NULL,'2020-09-23 19:19:28'),
+(54,2013,'四等奖',10,7,15,1,NULL,'2020-09-23 19:19:28'),
+(55,2013,'五等奖',10,7,10,1,NULL,'2020-09-23 19:19:28'),
+(56,2013,'六等奖',10,2,10,1,NULL,'2020-09-23 19:19:28'),
+(57,2013,'七等奖',10,2,5,1,NULL,'2020-09-23 19:19:28'),
+(58,2013,'八等奖',15,2,5,1,NULL,'2020-09-23 19:19:28'),
+(59,2013,'九等奖',15,2,5,1,NULL,'2020-09-23 19:19:28'),
+(60,2013,'十等奖',15,1,5,1,NULL,'2020-09-23 19:19:28'),
+(61,1021,'一等奖',1,7,10,4,'2020-09-24 16:56:52','2020-09-23 19:22:06'),
+(62,1021,'二等奖',4,7,12,3,'2020-09-24 16:57:06','2020-09-23 19:22:06'),
+(63,1021,'三等奖',10,7,13,2,'2020-09-24 16:57:14','2020-09-23 19:22:06'),
+(64,1021,'四等奖',25,7,15,1,'2020-09-24 16:57:25','2020-09-23 19:22:06'),
+(65,1021,'五等奖',5,2,10,1,'2020-09-24 16:57:37','2020-09-23 19:22:06'),
+(66,1021,'六等奖',15,2,15,1,'2020-09-24 16:57:50','2020-09-23 19:22:06'),
+(67,1021,'七等奖',5,1,5,1,'2020-09-24 16:58:03','2020-09-23 19:22:06'),
+(68,1021,'八等奖',15,1,5,1,'2020-09-24 16:58:26','2020-09-23 19:22:06'),
+(69,1021,'九等奖',5,3001,5,1,'2020-09-24 16:58:39','2020-09-23 19:22:06'),
+(70,1021,'十等奖',15,3001,10,1,'2020-09-24 16:58:51','2020-09-23 19:22:06'),
+(71,1022,'一等奖',1,7,10,4,'2020-09-24 17:00:03','2020-09-23 19:22:06'),
+(72,1022,'二等奖',4,7,12,3,'2020-09-24 17:00:18','2020-09-23 19:22:06'),
+(73,1022,'三等奖',10,7,13,2,'2020-09-24 17:00:26','2020-09-23 19:22:06'),
+(74,1022,'四等奖',25,7,15,1,'2020-09-24 17:00:36','2020-09-23 19:22:06'),
+(75,1022,'五等奖',5,2,10,1,'2020-09-24 17:00:47','2020-09-23 19:22:06'),
+(76,1022,'六等奖',15,2,15,1,'2020-09-24 17:00:57','2020-09-23 19:22:06'),
+(77,1022,'七等奖',5,1,5,1,'2020-09-24 17:01:09','2020-09-23 19:22:06'),
+(78,1022,'八等奖',15,1,5,1,'2020-09-24 17:01:18','2020-09-23 19:22:06'),
+(79,1022,'九等奖',5,3001,5,1,'2020-09-24 17:01:29','2020-09-23 19:22:06'),
+(80,1022,'十等奖',15,3001,10,1,'2020-09-24 17:01:45','2020-09-23 19:22:06'),
+(81,1023,'一等奖',1,7,15,4,NULL,'2020-09-23 19:22:06'),
+(82,1023,'二等奖',4,7,10,3,NULL,'2020-09-23 19:22:06'),
+(83,1023,'三等奖',10,7,20,2,NULL,'2020-09-23 19:22:06'),
+(84,1023,'四等奖',10,7,15,1,NULL,'2020-09-23 19:22:06'),
+(85,1023,'五等奖',10,7,10,1,NULL,'2020-09-23 19:22:06'),
+(86,1023,'六等奖',10,2,10,1,NULL,'2020-09-23 19:22:06'),
+(87,1023,'七等奖',10,2,5,1,NULL,'2020-09-23 19:22:06'),
+(88,1023,'八等奖',15,2,5,1,NULL,'2020-09-23 19:22:06'),
+(89,1023,'九等奖',15,2,5,1,NULL,'2020-09-23 19:22:06'),
+(90,1023,'十等奖',15,1,5,1,NULL,'2020-09-23 19:22:06'),
+(91,2021,'一等奖',1,7,15,4,NULL,'2020-09-23 19:22:06'),
+(92,2021,'二等奖',4,7,10,3,NULL,'2020-09-23 19:22:06'),
+(93,2021,'三等奖',10,7,20,2,NULL,'2020-09-23 19:22:06'),
+(94,2021,'四等奖',10,7,15,1,NULL,'2020-09-23 19:22:06'),
+(95,2021,'五等奖',10,7,10,1,NULL,'2020-09-23 19:22:06'),
+(96,2021,'六等奖',10,2,10,1,NULL,'2020-09-23 19:22:06'),
+(97,2021,'七等奖',10,2,5,1,NULL,'2020-09-23 19:22:06'),
+(98,2021,'八等奖',15,2,5,1,NULL,'2020-09-23 19:22:06'),
+(99,2021,'九等奖',15,2,5,1,NULL,'2020-09-23 19:22:06'),
+(100,2021,'十等奖',15,1,5,1,NULL,'2020-09-23 19:22:06'),
+(101,2022,'一等奖',1,7,15,4,NULL,'2020-09-23 19:25:13'),
+(102,2022,'二等奖',4,7,10,3,NULL,'2020-09-23 19:25:13'),
+(103,2022,'三等奖',10,7,20,2,NULL,'2020-09-23 19:25:13'),
+(104,2022,'四等奖',10,7,15,1,NULL,'2020-09-23 19:25:13'),
+(105,2022,'五等奖',10,7,10,1,NULL,'2020-09-23 19:25:13'),
+(106,2022,'六等奖',10,2,10,1,NULL,'2020-09-23 19:25:13'),
+(107,2022,'七等奖',10,2,5,1,NULL,'2020-09-23 19:25:13'),
+(108,2022,'八等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(109,2022,'九等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(110,2022,'十等奖',15,1,5,1,NULL,'2020-09-23 19:25:13'),
+(111,2023,'一等奖',1,7,15,4,NULL,'2020-09-23 19:25:13'),
+(112,2023,'二等奖',4,7,10,3,NULL,'2020-09-23 19:25:13'),
+(113,2023,'三等奖',10,7,20,2,NULL,'2020-09-23 19:25:13'),
+(114,2023,'四等奖',10,7,15,1,NULL,'2020-09-23 19:25:13'),
+(115,2023,'五等奖',10,7,10,1,NULL,'2020-09-23 19:25:13'),
+(116,2023,'六等奖',10,2,10,1,NULL,'2020-09-23 19:25:13'),
+(117,2023,'七等奖',10,2,5,1,NULL,'2020-09-23 19:25:13'),
+(118,2023,'八等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(119,2023,'九等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(120,2023,'十等奖',15,1,5,1,NULL,'2020-09-23 19:25:13'),
+(121,2031,'一等奖',1,7,15,4,NULL,'2020-09-23 19:25:13'),
+(122,2031,'二等奖',4,7,10,3,NULL,'2020-09-23 19:25:13'),
+(123,2031,'三等奖',10,7,20,2,NULL,'2020-09-23 19:25:13'),
+(124,2031,'四等奖',10,7,15,1,NULL,'2020-09-23 19:25:13'),
+(125,2031,'五等奖',10,7,10,1,NULL,'2020-09-23 19:25:13'),
+(126,2031,'六等奖',10,2,10,1,NULL,'2020-09-23 19:25:13'),
+(127,2031,'七等奖',10,2,5,1,NULL,'2020-09-23 19:25:13'),
+(128,2031,'八等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(129,2031,'九等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(130,2031,'十等奖',15,1,5,1,NULL,'2020-09-23 19:25:13'),
+(131,2032,'一等奖',1,7,15,4,NULL,'2020-09-23 19:25:13'),
+(132,2032,'二等奖',4,7,10,3,NULL,'2020-09-23 19:25:13'),
+(133,2032,'三等奖',10,7,20,2,NULL,'2020-09-23 19:25:13'),
+(134,2032,'四等奖',10,7,15,1,NULL,'2020-09-23 19:25:13'),
+(135,2032,'五等奖',10,7,10,1,NULL,'2020-09-23 19:25:13'),
+(136,2032,'六等奖',10,2,10,1,NULL,'2020-09-23 19:25:13'),
+(137,2032,'七等奖',10,2,5,1,NULL,'2020-09-23 19:25:13'),
+(138,2032,'八等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(139,2032,'九等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(140,2032,'十等奖',15,1,5,1,NULL,'2020-09-23 19:25:13'),
+(141,2033,'一等奖',1,7,15,4,NULL,'2020-09-23 19:25:13'),
+(142,2033,'二等奖',4,7,10,3,NULL,'2020-09-23 19:25:13'),
+(143,2033,'三等奖',10,7,20,2,NULL,'2020-09-23 19:25:13'),
+(144,2033,'四等奖',10,7,15,1,NULL,'2020-09-23 19:25:13'),
+(145,2033,'五等奖',10,7,10,1,NULL,'2020-09-23 19:25:13'),
+(146,2033,'六等奖',10,2,10,1,NULL,'2020-09-23 19:25:13'),
+(147,2033,'七等奖',10,2,5,1,NULL,'2020-09-23 19:25:13'),
+(148,2033,'八等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(149,2033,'九等奖',15,2,5,1,NULL,'2020-09-23 19:25:13'),
+(150,2033,'十等奖',15,1,5,1,NULL,'2020-09-23 19:25:13'),
+(151,2041,'一等奖',1,7,15,4,NULL,'2020-09-23 19:26:51'),
+(152,2041,'二等奖',4,7,10,3,NULL,'2020-09-23 19:26:51'),
+(153,2041,'三等奖',10,7,20,2,NULL,'2020-09-23 19:26:51'),
+(154,2041,'四等奖',10,7,15,1,NULL,'2020-09-23 19:26:51'),
+(155,2041,'五等奖',10,7,10,1,NULL,'2020-09-23 19:26:51'),
+(156,2041,'六等奖',10,2,10,1,NULL,'2020-09-23 19:26:51'),
+(157,2041,'七等奖',10,2,5,1,NULL,'2020-09-23 19:26:51'),
+(158,2041,'八等奖',15,2,5,1,NULL,'2020-09-23 19:26:51'),
+(159,2041,'九等奖',15,2,5,1,NULL,'2020-09-23 19:26:51'),
+(160,2041,'十等奖',15,1,5,1,NULL,'2020-09-23 19:26:51'),
+(161,2042,'一等奖',1,7,15,4,NULL,'2020-09-23 19:26:51'),
+(164,2042,'四等奖',10,7,15,1,NULL,'2020-09-23 19:26:51'),
+(165,2042,'五等奖',10,7,10,1,NULL,'2020-09-23 19:26:51'),
+(166,2042,'六等奖',10,2,10,1,NULL,'2020-09-23 19:26:51'),
+(167,2042,'七等奖',10,2,5,1,NULL,'2020-09-23 19:26:51'),
+(168,2042,'八等奖',15,2,5,1,NULL,'2020-09-23 19:26:51'),
+(169,2042,'九等奖',15,2,5,1,NULL,'2020-09-23 19:26:51'),
+(170,2042,'十等奖',15,1,5,1,NULL,'2020-09-23 19:26:51'),
+(171,2043,'一等奖',1,7,15,4,NULL,'2020-09-23 19:26:51'),
+(172,2043,'二等奖',4,7,10,3,NULL,'2020-09-23 19:26:51'),
+(173,2043,'三等奖',10,7,20,2,NULL,'2020-09-23 19:26:51'),
+(174,1032,'一等奖',1,7,10,4,NULL,'2020-10-28 16:35:32'),
+(175,1031,'1',0,0,0,0,NULL,'2020-10-28 16:36:01'),
+(176,1032,'二等奖',4,7,12,3,NULL,'2020-10-28 16:36:20'),
+(177,1032,'三等奖',10,7,13,2,NULL,'2020-10-28 16:36:41'),
+(178,1032,'四等奖',25,7,15,1,NULL,'2020-10-28 16:42:05'),
+(179,1032,'五等奖',5,2,10,1,NULL,'2020-10-28 16:42:41'),
+(180,1032,'六等奖',15,2,15,1,NULL,'2020-10-28 16:43:06'),
+(181,1032,'七等奖',5,1,5,1,NULL,'2020-10-28 16:43:50'),
+(182,1032,'八等奖',15,1,5,1,NULL,'2020-10-28 16:44:13'),
+(183,1032,'九等奖',5,3001,5,1,NULL,'2020-10-28 16:45:37'),
+(184,1032,'十等奖',15,3001,10,1,NULL,'2020-10-28 16:45:59'),
+(185,1042,'一等奖',1,7,10,4,NULL,'2020-10-28 16:50:52'),
+(186,1042,'二等奖',4,7,12,3,NULL,'2020-10-28 16:51:14'),
+(187,1042,'三等奖',10,7,13,2,'2020-10-28 17:08:01','2020-10-28 16:51:35'),
+(188,1042,'四等奖',25,7,15,1,NULL,'2020-10-28 16:51:59'),
+(189,1042,'五等奖',5,2,10,1,NULL,'2020-10-28 16:52:25'),
+(190,1042,'六等奖',15,2,15,1,NULL,'2020-10-28 16:52:48'),
+(191,1042,'七等奖',5,1,5,1,NULL,'2020-10-28 16:53:08'),
+(192,1042,'八等奖',15,1,5,1,NULL,'2020-10-28 16:53:25'),
+(193,1042,'九等奖',5,3001,5,1,NULL,'2020-10-28 16:54:52'),
+(194,1042,'十等奖',15,3001,10,1,'2020-10-28 17:07:24','2020-10-28 16:55:09');
+
+/*Table structure for table `lottery_result` */
+
+DROP TABLE IF EXISTS `lottery_result`;
+
+CREATE TABLE `lottery_result` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `player_id` int DEFAULT NULL COMMENT '玩家id',
+  `nick` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '昵称',
+  `chang` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '场次',
+  `total_money` int DEFAULT NULL COMMENT '总价值',
+  `award_type` int DEFAULT NULL COMMENT '奖励类型',
+  `award_num` int DEFAULT NULL COMMENT '奖励数量',
+  `base` int DEFAULT NULL COMMENT '抽到价值',
+  `create_time` datetime DEFAULT NULL COMMENT '抽奖时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `lottery_result` */
+
+/*Table structure for table `lucky_cue` */
+
+DROP TABLE IF EXISTS `lucky_cue`;
+
+CREATE TABLE `lucky_cue` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `player_id` int DEFAULT NULL,
+  `level` int DEFAULT NULL COMMENT '当前等级',
+  `free_flag` int DEFAULT NULL COMMENT '当前等级领奖记录，1，2，4，8',
+  `vip_flag` int DEFAULT NULL,
+  `free_time` bigint DEFAULT NULL COMMENT '免费时间，48小时复活',
+  `free_times` int DEFAULT NULL COMMENT '免费次数',
+  `vip_times` int DEFAULT NULL COMMENT '剩余购买次数',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `lucky_cue` */
+
+/*Table structure for table `match_config` */
+
+DROP TABLE IF EXISTS `match_config`;
+
+CREATE TABLE `match_config` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cue_weight` double DEFAULT NULL COMMENT '杆数权重',
+  `win_weight` double DEFAULT NULL COMMENT '胜率权重',
+  `streak_weight` double DEFAULT NULL COMMENT '连胜权重',
+  `is_open` int DEFAULT NULL COMMENT '是否启用匹配机制',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `match_config` */
+
+insert  into `match_config`(`id`,`cue_weight`,`win_weight`,`streak_weight`,`is_open`) values 
+(1,0.2,0.5,0.3,1);
+
+/*Table structure for table `player` */
+
+DROP TABLE IF EXISTS `player`;
+
+CREATE TABLE `player` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nick` varchar(256) DEFAULT NULL,
+  `head` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `sex` int DEFAULT NULL,
+  `gold` int DEFAULT NULL,
+  `diamond` int DEFAULT NULL,
+  `exp` int DEFAULT NULL,
+  `points` int DEFAULT NULL COMMENT '会员点数',
+  `fight` json DEFAULT NULL,
+  `chang` json DEFAULT NULL COMMENT '每个场次的游戏次数,抽奖用',
+  `item` json DEFAULT NULL COMMENT '道具',
+  `login_time` datetime DEFAULT NULL COMMENT '登录时间',
+  `logout_time` datetime DEFAULT NULL COMMENT '离线时间',
+  `update_time` datetime DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=107871 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `player` */
+
+insert  into `player`(`id`,`nick`,`head`,`sex`,`gold`,`diamond`,`exp`,`points`,`fight`,`chang`,`item`,`login_time`,`logout_time`,`update_time`,`create_time`) values 
+(-694,'＄ 回忆 ＄','D694.jpg',0,-101600,39,0,0,'{}','{}','[]',NULL,NULL,'2020-11-24 14:24:28','2020-09-25 16:22:27'),
+(-693,'！','D693.jpg',0,-162800,-24,0,0,'{}','{}','[]',NULL,NULL,'2020-11-12 17:31:35','2020-09-25 16:22:27'),
+(-692,'麦吉丽','D692.jpg',0,-124400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:08:45','2020-09-25 16:22:27'),
+(-691,'阿迪力江0996','D691.jpg',0,-157600,17,0,0,'{}','{}','[]',NULL,NULL,'2020-11-12 15:08:18','2020-09-25 16:22:27'),
+(-690,'阿布都拉','D690.jpg',0,-176400,-66,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:58:24','2020-09-25 16:22:27'),
+(-689,'阿不都拉','D689.jpg',0,-172800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:01:25','2020-09-25 16:22:27'),
+(-688,'阿不拉','D688.jpg',0,-228000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:21:11','2020-09-25 16:22:27'),
+(-687,'迪力夏提 .','D687.jpg',0,-171200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:43:23','2020-09-25 16:22:27'),
+(-686,'迪力','D686.jpg',0,-230800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:58:39','2020-09-25 16:22:27'),
+(-685,'赛米','D685.jpg',0,-253200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:30:08','2020-09-25 16:22:27'),
+(-684,'苏巴提','D684.jpg',0,-147600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:28:37','2020-09-25 16:22:27'),
+(-683,'艾迪热斯江','D683.jpg',0,-146400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:39:56','2020-09-25 16:22:27'),
+(-682,'艾沙江','D682.jpg',0,-181200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:51:04','2020-09-25 16:22:27'),
+(-681,'艾散江','D681.jpg',0,-280000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:17:54','2020-09-25 16:22:27'),
+(-680,'艾散','D680.jpg',0,-170000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:23:35','2020-09-25 16:22:27'),
+(-679,'艾尼瓦尔江','D679.jpg',0,-196400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:37:02','2020-09-25 16:22:27'),
+(-678,'艾孜提','D678.jpg',0,-188000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:46:24','2020-09-25 16:22:27'),
+(-677,'艾力','D677.jpg',0,-210000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:05:40','2020-09-25 16:22:27'),
+(-676,'艾买尔江','D676.jpg',0,-162800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:41:41','2020-09-25 16:22:27'),
+(-675,'缺一个世界','D675.jpg',0,-73200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-03 19:09:50','2020-09-25 16:22:27'),
+(-674,'终结者','D674.jpg',0,-202800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 07:37:08','2020-09-25 16:22:27'),
+(-673,'累～～的～心','D673.jpg',0,-136800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:26:14','2020-09-25 16:22:27'),
+(-672,'篮球','D672.jpg',0,-167200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:15:35','2020-09-25 16:22:27'),
+(-671,'白花','D671.jpg',0,-225600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 07:59:10','2020-09-25 16:22:27'),
+(-670,'痛苦的小伙子','D670.jpg',0,-162000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:53:30','2020-09-25 16:22:27'),
+(-669,'玛依拉','D669.jpg',0,-308000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:15:14','2020-09-25 16:22:27'),
+(-668,'玉努斯','D668.jpg',0,-150000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:54:33','2020-09-25 16:22:27'),
+(-667,'爱情guzal','D667.jpg',0,-138400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:40:22','2020-09-25 16:22:27'),
+(-666,'爱情  1314','D666.jpg',0,-190400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:57:49','2020-09-25 16:22:27'),
+(-665,'爱你一生','D665.jpg',0,-200000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:18:58','2020-09-25 16:22:27'),
+(-664,'爱人不要','D664.jpg',0,-233600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:09:23','2020-09-25 16:22:27'),
+(-663,'热西提','D663.jpg',0,-241200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:19:58','2020-09-25 16:22:27'),
+(-662,'烧烤王','D662.jpg',0,-168800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 05:47:49','2020-09-25 16:22:27'),
+(-661,'火     影','D661.jpg',0,-157200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:45:56','2020-09-25 16:22:27'),
+(-660,'比不上我','D660.jpg',0,-224000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:27:50','2020-09-25 16:22:27'),
+(-659,'无所谓','D659.jpg',0,-329200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:42:52','2020-09-25 16:22:27'),
+(-658,'无名','D658.jpg',0,-245600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:08:20','2020-09-25 16:22:27'),
+(-657,'排总','D657.jpg',0,-82000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:01:25','2020-09-25 16:22:27'),
+(-656,'抱负','D656.jpg',0,-256400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:23:56','2020-09-25 16:22:27'),
+(-655,'扎依尔','D655.jpg',0,-188000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:43:28','2020-09-25 16:22:27'),
+(-654,'我的生命中只有你。','D654.jpg',0,-253600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:12:51','2020-09-25 16:22:27'),
+(-653,'我爱心一个人','D653.jpg',0,-163600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 10:12:41','2020-09-25 16:22:27'),
+(-652,'我们不一样','D652.jpg',0,-143600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:10:12','2020-09-25 16:22:27'),
+(-651,'我不爱你。','D651.jpg',0,-110800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 11:54:32','2020-09-25 16:22:27'),
+(-650,'想你','D650.jpg',0,-194400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:57:38','2020-09-25 16:22:27'),
+(-649,'情郎。520','D649.jpg',0,-281600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:51:16','2020-09-25 16:22:27'),
+(-648,'心连爱','D648.jpg',0,-208800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:06:55','2020-09-25 16:22:27'),
+(-647,'微微一笑','D647.jpg',0,-183600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:03:25','2020-09-25 16:22:27'),
+(-646,'幸福是你。','D646.jpg',0,-245200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:22:28','2020-09-25 16:22:27'),
+(-645,'幸福520','D645.jpg',0,-188400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:32:34','2020-09-25 16:22:27'),
+(-644,'幸福','D644.jpg',0,-221600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:25:40','2020-09-25 16:22:27'),
+(-643,'巴吐尔','D643.jpg',0,-190400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:35:52','2020-09-25 16:22:27'),
+(-642,'对方正在输入...','D642.jpg',0,-277200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:04:10','2020-09-25 16:22:27'),
+(-641,'宝贝','D641.jpg',0,-189200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:52:06','2020-09-25 16:22:27'),
+(-640,'好兄弟','D640.jpg',0,-185600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:58:41','2020-09-25 16:22:27'),
+(-639,'太来提','D639.jpg',0,-144000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:57:32','2020-09-25 16:22:27'),
+(-638,'太必叶','D638.jpg',0,-146000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:31:14','2020-09-25 16:22:27'),
+(-637,'外力江','D637.jpg',0,-192800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:23:32','2020-09-25 16:22:27'),
+(-636,'外力','D636.jpg',0,-138000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:31:24','2020-09-25 16:22:27'),
+(-635,'塔里木','D635.jpg',0,-112800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:25:24','2020-09-25 16:22:27'),
+(-634,'唯一','D634.jpg',0,-203600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:04:48','2020-09-25 16:22:27'),
+(-633,'哥要的就是你','D633.jpg',0,-232000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:26:39','2020-09-25 16:22:27'),
+(-632,'哥的感觉你不懂','D632.jpg',0,-102400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:03:24','2020-09-25 16:22:27'),
+(-631,'哥帅','D631.jpg',0,-242000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:04:04','2020-09-25 16:22:27'),
+(-630,'吐尔逊江','D630.jpg',0,-202800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:09:38','2020-09-25 16:22:27'),
+(-629,'参赛人','D629.jpg',0,-105600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:23:24','2020-09-25 16:22:27'),
+(-628,'去xian买sa','D628.jpg',0,-219600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:36:18','2020-09-25 16:22:27'),
+(-627,'卡木力','D627.jpg',0,-144800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:59:00','2020-09-25 16:22:27'),
+(-626,'卡哈尔','D626.jpg',0,-161200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:57:42','2020-09-25 16:22:27'),
+(-625,'医疗器械','D625.jpg',0,-142400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:24:40','2020-09-25 16:22:27'),
+(-624,'努尔麦麦提','D624.jpg',0,-156400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:17:18','2020-09-25 16:22:27'),
+(-623,'冰心','D623.jpg',0,-237600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:18:00','2020-09-25 16:22:27'),
+(-622,'克然木江','D622.jpg',0,-160400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:00:46','2020-09-25 16:22:27'),
+(-621,'依马木江 阿吾提','D621.jpg',0,-207600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:16:17','2020-09-25 16:22:27'),
+(-620,'你好我是中国人我爱中国','D620.jpg',0,-236000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:20:32','2020-09-25 16:22:27'),
+(-619,'仲意','D619.jpg',0,-190800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:59:18','2020-09-25 16:22:27'),
+(-618,'亚森江0997','D618.jpg',0,-220000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:13:00','2020-09-25 16:22:27'),
+(-617,'为幸福努力','D617.jpg',0,-182800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:47:12','2020-09-25 16:22:27'),
+(-616,'为什么？','D616.jpg',0,-203200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:47:10','2020-09-25 16:22:27'),
+(-615,'为了自己','D615.jpg',0,-139200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:04:48','2020-09-25 16:22:27'),
+(-614,'为了幸福','D614.jpg',0,-122800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:05:25','2020-09-25 16:22:27'),
+(-613,'中华儿子','D613.jpg',0,-195600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-03 19:15:28','2020-09-25 16:22:27'),
+(-612,'世界因为爱而美好','D612.jpg',0,-253200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:05:53','2020-09-25 16:22:27'),
+(-611,'㏄','D611.jpg',0,-171200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:31:08','2020-09-25 16:22:27'),
+(-610,'ツWaRiS','D610.jpg',0,-167600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:25:20','2020-09-25 16:22:27'),
+(-609,'дκβд~я','D609.jpg',0,-334400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:47:11','2020-09-25 16:22:27'),
+(-608,'àTáMāN','D608.jpg',0,-172000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 09:27:13','2020-09-25 16:22:27'),
+(-607,'zamir-','D607.jpg',0,-95200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:23:53','2020-09-25 16:22:27'),
+(-606,'Yur','D606.jpg',0,-229200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:37:12','2020-09-25 16:22:27'),
+(-605,'yuksel','D605.jpg',0,-238400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:21:42','2020-09-25 16:22:27'),
+(-604,'YEGAna','D604.jpg',0,-121600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:32:49','2020-09-25 16:22:27'),
+(-603,'YAXLIK','D603.jpg',0,-82800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:03:40','2020-09-25 16:22:27'),
+(-602,'xax yurak','D602.jpg',0,-170400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:03:52','2020-09-25 16:22:27'),
+(-601,'xax yaxlik','D601.jpg',0,-214400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:58:27','2020-09-25 16:22:27'),
+(-600,'xax  ballar','D600.jpg',0,-212400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:18:40','2020-09-25 16:22:27'),
+(-599,'waxximoda','D599.jpg',0,-340000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:08:00','2020-09-25 16:22:27'),
+(-598,'wait forever','D598.jpg',0,-304800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:25:18','2020-09-25 16:22:27'),
+(-597,'VisKi ( 维 )','D597.jpg',0,-256400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:22:27','2020-09-25 16:22:27'),
+(-596,'UTNA ALAMBU','D596.jpg',0,-272000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 02:50:16','2020-09-25 16:22:27'),
+(-595,'unTuX','D595.jpg',0,-227600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:10:11','2020-09-25 16:22:27'),
+(-594,'umakog','D594.jpg',0,-95600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:27:04','2020-09-25 16:22:27'),
+(-593,'taxnyaz','D593.jpg',0,-177600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:48:45','2020-09-25 16:22:27'),
+(-592,'tangsahar','D592.jpg',0,-262800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:01:53','2020-09-25 16:22:27'),
+(-591,'tan ha ye get','D591.jpg',0,-59600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:21:34','2020-09-25 16:22:27'),
+(-590,'tamqa','D590.jpg',0,-282400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:23:15','2020-09-25 16:22:27'),
+(-589,'Sky','D589.jpg',0,-126000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:03:40','2020-09-25 16:22:27'),
+(-588,'SIRDAX','D588.jpg',0,-236400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:30:18','2020-09-25 16:22:27'),
+(-587,'sevgilim','D587.jpg',0,-139200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 13:38:17','2020-09-25 16:22:27'),
+(-586,'SBS 。','D586.jpg',0,-144000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:08:23','2020-09-25 16:22:27'),
+(-585,'SawiR','D585.jpg',0,-179200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:12:43','2020-09-25 16:22:27'),
+(-584,'saba','D584.jpg',0,-155600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:23:47','2020-09-25 16:22:27'),
+(-583,'R...','D583.jpg',0,-132800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:07:04','2020-09-25 16:22:27'),
+(-582,'R&A-Hilala','D582.jpg',0,-218000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 06:12:40','2020-09-25 16:22:27'),
+(-581,'QIN  SOYGU','D581.jpg',0,-206000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 01:34:31','2020-09-25 16:22:27'),
+(-580,'P￥','D580.jpg',0,-224000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:42:14','2020-09-25 16:22:27'),
+(-579,'pin han','D579.jpg',0,-168000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:15:26','2020-09-25 16:22:27'),
+(-578,'Paranoid','D578.jpg',0,-226400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:41:40','2020-09-25 16:22:27'),
+(-577,'oynaxm','D577.jpg',0,-260400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:22:37','2020-09-25 16:22:27'),
+(-576,'otmux','D576.jpg',0,-191600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:19:25','2020-09-25 16:22:27'),
+(-575,'ot yurak','D575.jpg',0,-200800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:24:21','2020-09-25 16:22:27'),
+(-574,'omay gat','D574.jpg',0,-179600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:52:39','2020-09-25 16:22:27'),
+(-573,'ok138','D573.jpg',0,-125600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:41:33','2020-09-25 16:22:27'),
+(-572,'Next','D572.jpg',0,-173600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:30:49','2020-09-25 16:22:27'),
+(-571,'muhtar','D571.jpg',0,-170800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 09:30:21','2020-09-25 16:22:27'),
+(-570,'muhabatlik','D570.jpg',0,-262800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:21:35','2020-09-25 16:22:27'),
+(-569,'motwar','D569.jpg',0,-192000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:54:04','2020-09-25 16:22:27'),
+(-568,'miskin心','D568.jpg',0,-189200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:09:45','2020-09-25 16:22:27'),
+(-567,'MiSkEn','D567.jpg',0,-212000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:35:38','2020-09-25 16:22:27'),
+(-566,'mawlan...','D566.jpg',0,-250000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:41:27','2020-09-25 16:22:27'),
+(-565,'mardan','D565.jpg',0,-176400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:10:42','2020-09-25 16:22:27'),
+(-564,'ManMu','D564.jpg',0,-116800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:37:46','2020-09-25 16:22:27'),
+(-563,'M!an1','D563.jpg',0,-180800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:07:07','2020-09-25 16:22:27'),
+(-562,'LOVE YUO','D562.jpg',0,-187200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:09:05','2020-09-25 16:22:27'),
+(-561,'L   O   G','D561.jpg',0,-224800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:23:53','2020-09-25 16:22:27'),
+(-560,'KULUP YAXAYMAN','D560.jpg',0,-180800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:18:44','2020-09-25 16:22:27'),
+(-559,'KOXKAR BAY','D559.jpg',0,-208400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:16:54','2020-09-25 16:22:27'),
+(-558,'Kiss不离','D558.jpg',0,-284000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:55:19','2020-09-25 16:22:27'),
+(-557,'KAyss','D557.jpg',0,-274800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:22:03','2020-09-25 16:22:27'),
+(-556,'KARWAn','D556.jpg',0,-190000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:11:42','2020-09-25 16:22:27'),
+(-555,'kar koz','D555.jpg',0,-130000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 10:31:21','2020-09-25 16:22:27'),
+(-554,'joke','D554.jpg',0,-236800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:27:04','2020-09-25 16:22:27'),
+(-553,'JeNiM_L_M','D553.jpg',0,-360000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:22:37','2020-09-25 16:22:27'),
+(-552,'jasur','D552.jpg',0,-184800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:07:06','2020-09-25 16:22:27'),
+(-551,'isil...yaxa','D551.jpg',0,-168000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:11:08','2020-09-25 16:22:27'),
+(-550,'HuMaRiM','D550.jpg',0,-116000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:31:51','2020-09-25 16:22:27'),
+(-549,'huma','D549.jpg',0,-205600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:19:50','2020-09-25 16:22:27'),
+(-548,'HAYGRT','D548.jpg',0,-258400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:12:41','2020-09-25 16:22:27'),
+(-547,'hayatim sen','D547.jpg',0,-154000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:27:28','2020-09-25 16:22:27'),
+(-546,'hasan','D546.jpg',0,-200000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:27:04','2020-09-25 16:22:27'),
+(-545,'hap sini','D545.jpg',0,-232400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:12:19','2020-09-25 16:22:27'),
+(-544,'guzal  yaxlik','D544.jpg',0,-190400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:45:39','2020-09-25 16:22:27'),
+(-543,'gulum','D543.jpg',0,-226800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:16:22','2020-09-25 16:22:27'),
+(-542,'eziz jan','D542.jpg',0,-322800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:02:14','2020-09-25 16:22:27'),
+(-541,'EmRan.TaiGer','D541.jpg',0,-281600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:26:03','2020-09-25 16:22:27'),
+(-540,'ebrahim','D540.jpg',0,-83200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:36:13','2020-09-25 16:22:27'),
+(-539,'E','D539.jpg',0,-235200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:50:14','2020-09-25 16:22:27'),
+(-538,'Dil','D538.jpg',0,-201600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 02:46:15','2020-09-25 16:22:27'),
+(-537,'DELBALL','D537.jpg',0,-120000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:48:34','2020-09-25 16:22:27'),
+(-536,'bolde bas','D536.jpg',0,-232000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:20:56','2020-09-25 16:22:27'),
+(-535,'BIRDANAM','D535.jpg',0,-148800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:31:16','2020-09-25 16:22:27'),
+(-534,'bahtim san','D534.jpg',0,-235600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:10:29','2020-09-25 16:22:27'),
+(-533,'bahit1215','D533.jpg',0,-218400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:29:40','2020-09-25 16:22:27'),
+(-532,'bahit       izdap','D532.jpg',0,-176400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:59:02','2020-09-25 16:22:27'),
+(-531,'baglan','D531.jpg',0,-249600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:27:21','2020-09-25 16:22:27'),
+(-530,'BaD','D530.jpg',0,-172800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:40:06','2020-09-25 16:22:27'),
+(-529,'AZiz','D529.jpg',0,-184400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:09:54','2020-09-25 16:22:27'),
+(-528,'Ay','D528.jpg',0,-190800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 07:55:34','2020-09-25 16:22:27'),
+(-527,'AXKM','D527.jpg',0,-208800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 04:38:19','2020-09-25 16:22:27'),
+(-526,'axik886','D526.jpg',0,-198800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:17:43','2020-09-25 16:22:27'),
+(-525,'axik123','D525.jpg',0,-176000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:15:26','2020-09-25 16:22:27'),
+(-524,'axik','D524.jpg',0,-216400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:41:42','2020-09-25 16:22:27'),
+(-523,'aSLaySaN','D523.jpg',0,-90800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:30:25','2020-09-25 16:22:27'),
+(-522,'askiboy','D522.jpg',0,-218000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:57:10','2020-09-25 16:22:27'),
+(-521,'ASKAR','D521.jpg',0,-219600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:41:42','2020-09-25 16:22:27'),
+(-520,'as 来san','D520.jpg',0,-312000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:24:04','2020-09-25 16:22:27'),
+(-519,'arman','D519.jpg',0,-320000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:15:46','2020-09-25 16:22:27'),
+(-518,'ar zu','D518.jpg',0,-140000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:39:35','2020-09-25 16:22:27'),
+(-517,'AnZaR$NaZaR','D517.jpg',0,-153200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:23:13','2020-09-25 16:22:27'),
+(-516,'alimjan','D516.jpg',0,-234400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:28:07','2020-09-25 16:22:27'),
+(-515,'ali','D515.jpg',0,-301600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:33:32','2020-09-25 16:22:27'),
+(-514,'Ai-Ar','D514.jpg',0,-195600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:36:43','2020-09-25 16:22:27'),
+(-513,'Adolf','D513.jpg',0,-159200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 12:18:31','2020-09-25 16:22:27'),
+(-512,'adiiiiii','D512.jpg',0,-250400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:32:56','2020-09-25 16:22:27'),
+(-511,'ABLAJAN','D511.jpg',0,-329200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:07:18','2020-09-25 16:22:27'),
+(-510,'AAA Atesh nur','D510.jpg',0,-196400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:32:08','2020-09-25 16:22:27'),
+(-509,'A..','D509.jpg',0,-274400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:17:49','2020-09-25 16:22:27'),
+(-508,'A 狼','D508.jpg',0,-255200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:03:10','2020-09-25 16:22:27'),
+(-507,'A      Y    W   Z    U','D507.jpg',0,-308800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:42:32','2020-09-25 16:22:27'),
+(-506,'0.1','D506.jpg',0,-207600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:35:29','2020-09-25 16:22:27'),
+(-505,'......@blat.....','D505.jpg',0,-326000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:24:37','2020-09-25 16:22:27'),
+(-504,'............K......','D504.jpg',0,-140400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:42:18','2020-09-25 16:22:27'),
+(-503,'$ 勇敢的心','D503.jpg',0,-82800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:31:00','2020-09-25 16:22:27'),
+(-502,'#Bol di  Yetade','D502.jpg',0,-242000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:34:02','2020-09-25 16:22:27'),
+(-501,'!小哥哥','D501.jpg',0,-191600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:31:20','2020-09-25 16:22:27'),
+(-500,'?爱情?','D500.jpg',0,-147200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:22:02','2020-09-25 16:22:27'),
+(-499,'阿依夏木古丽。','D499.jpg',0,-244000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:39:11','2020-09-25 16:22:27'),
+(-498,'メℯིkãℜⅈིℳ࿆࿆','D498.jpg',0,-160800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:43:52','2020-09-25 16:22:27'),
+(-497,'oynaxma','D497.jpg',0,-186800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:33:09','2020-09-25 16:22:27'),
+(-496,'开心每一天','D496.jpg',0,-223600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:41:46','2020-09-25 16:22:27'),
+(-495,'a','D495.jpg',0,-216400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:21:37','2020-09-25 16:22:27'),
+(-494,'ǎℜℳǎηi','D494.jpg',0,-320800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:21:50','2020-09-25 16:22:27'),
+(-493,'我爱️老婆','D493.jpg',0,-195200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:39:27','2020-09-25 16:22:27'),
+(-492,'mawlan','D492.jpg',0,-112400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:32:36','2020-09-25 16:22:27'),
+(-491,'sirdax ','D491.jpg',0,-132800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:19:09','2020-09-25 16:22:27'),
+(-490,'阿布都拉','D490.jpg',0,-124400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:19:13','2020-09-25 16:22:27'),
+(-489,'棒棒糖 ????','D489.jpg',0,-212800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:03:43','2020-09-25 16:22:27'),
+(-488,'yuksal','D488.jpg',0,-223200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:46:54','2020-09-25 16:22:27'),
+(-487,'铁狼','D487.jpg',0,-172000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:25:06','2020-09-25 16:22:27'),
+(-486,'5?2?0?','D486.jpg',0,-242800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:06:55','2020-09-25 16:22:27'),
+(-485,'AsKi','D485.jpg',0,-198000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:32:59','2020-09-25 16:22:27'),
+(-484,'?  巴 总','D484.jpg',0,-175200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:17:32','2020-09-25 16:22:27'),
+(-483,'卡尔万','D483.jpg',0,-281200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:29:35','2020-09-25 16:22:27'),
+(-482,'木沙江','D482.jpg',0,-202400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:38:58','2020-09-25 16:22:27'),
+(-481,'?FaKeR?','D481.jpg',0,-180000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:33:02','2020-09-25 16:22:27'),
+(-480,'XiRiN COYGU','D480.jpg',0,-214800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:49:30','2020-09-25 16:22:27'),
+(-479,'yusupjan','D479.jpg',0,-138000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-03 19:47:17','2020-09-25 16:22:27'),
+(-478,'?阿布地米吉提?','D478.jpg',0,-177200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:41:41','2020-09-25 16:22:27'),
+(-477,'W ₁₃¹⁴ℳ⁵₂o W','D477.jpg',0,-203200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:33:16','2020-09-25 16:22:27'),
+(-476,'艾力','D476.jpg',0,-334800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 08:27:50','2020-09-25 16:22:27'),
+(-475,'塔依尔','D475.jpg',0,-304400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:13:50','2020-09-25 16:22:27'),
+(-474,'juratjan.','D474.jpg',0,-257200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 10:40:08','2020-09-25 16:22:27'),
+(-473,'TAKLIMAKAN','D473.jpg',0,-184400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:22:02','2020-09-25 16:22:27'),
+(-472,'毛兰江','D472.jpg',0,-208400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:21:32','2020-09-25 16:22:27'),
+(-471,'耐心','D471.jpg',0,-250400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:59:21','2020-09-25 16:22:27'),
+(-470,'阿黑哈提','D470.jpg',0,-182000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:51:51','2020-09-25 16:22:27'),
+(-469,'命运','D469.jpg',0,-95600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:25:21','2020-09-25 16:22:27'),
+(-468,'卡斯木·阿布都拉','D468.jpg',0,-246400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:00:20','2020-09-25 16:22:27'),
+(-467,'我不应该岀现','D467.jpg',0,-236000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:20:43','2020-09-25 16:22:27'),
+(-466,'独一无二','D466.jpg',0,-129200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:38:33','2020-09-25 16:22:27'),
+(-465,'?ℒℴѵℯ','D465.jpg',0,-193200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:21:19','2020-09-25 16:22:27'),
+(-464,'tulpar','D464.jpg',0,-226000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:24:51','2020-09-25 16:22:27'),
+(-463,'艾','D463.jpg',0,-114400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:31:57','2020-09-25 16:22:27'),
+(-462,'没必要 ','D462.jpg',0,-211200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:37:01','2020-09-25 16:22:27'),
+(-461,'꧁ൢ5²0ℒღѵℯ¹3¹4ൢ꧂','D461.jpg',0,-178800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:41:24','2020-09-25 16:22:27'),
+(-460,'与世无争','D460.jpg',0,-213600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:24:56','2020-09-25 16:22:27'),
+(-459,'永远爱','D459.jpg',0,-161600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:18:44','2020-09-25 16:22:27'),
+(-458,'?幸福之旅?','D458.jpg',0,-189600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:45:50','2020-09-25 16:22:27'),
+(-457,'ԅ(¯ㅂk¯ԅ)','D457.jpg',0,-166000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:41:49','2020-09-25 16:22:27'),
+(-456,'难忘的时光','D456.jpg',0,-227600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:08:54','2020-09-25 16:22:27'),
+(-455,'alim','D455.jpg',0,-155600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:00:28','2020-09-25 16:22:27'),
+(-454,'salkin ','D454.jpg',0,-222000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:07:36','2020-09-25 16:22:27'),
+(-453,'?阿总','D453.jpg',0,-148000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:20:27','2020-09-25 16:22:27'),
+(-452,'Yig@n@','D452.jpg',0,-222000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:36:48','2020-09-25 16:22:27'),
+(-451,'戇紗','D451.jpg',0,-211200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:44:52','2020-09-25 16:22:27'),
+(-450,'¥.@.¥....＄···· ¥·!','D450.jpg',0,-182400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 10:45:33','2020-09-25 16:22:27'),
+(-449,'So丶一生一世','D449.jpg',0,-213200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:08:00','2020-09-25 16:22:27'),
+(-448,'σんんσ___J！Nℳ','D448.jpg',0,-270800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:41:24','2020-09-25 16:22:27'),
+(-447,'༻áℳ࿆࿆ℜⅈིkⅈིℳ࿆࿆༺','D447.jpg',0,-220400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 08:26:54','2020-09-25 16:22:27'),
+(-446,'kྀäpSⅈིZ哥ི','D446.jpg',0,-218800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:25:59','2020-09-25 16:22:27'),
+(-445,'123794385艾','D445.jpg',0,-147200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:35:57','2020-09-25 16:22:27'),
+(-444,'rmis','D444.jpg',0,-205600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:00:21','2020-09-25 16:22:27'),
+(-443,'小农民','D443.jpg',0,-242000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:25:14','2020-09-25 16:22:27'),
+(-442,'귀여운 오마 크','D442.jpg',0,-286400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:38:28','2020-09-25 16:22:27'),
+(-441,'(~**~ )','D441.jpg',0,-190000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:22:56','2020-09-25 16:22:27'),
+(-440,'小畵家','D440.jpg',0,-223200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:27:28','2020-09-25 16:22:27'),
+(-439,'小蛮腰','D439.jpg',0,-162000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:19:37','2020-09-25 16:22:27'),
+(-438,'奋 斗  者','D438.jpg',0,-192800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-03 22:35:59','2020-09-25 16:22:27'),
+(-437,'豪门*贵族','D437.jpg',0,-201600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:40:18','2020-09-25 16:22:27'),
+(-436,'꧁滚 ꧂','D436.jpg',0,-241200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:57:36','2020-09-25 16:22:27'),
+(-435,'скучаю мама -','D435.jpg',0,-150800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:39:19','2020-09-25 16:22:27'),
+(-434,'B A T   .  B O Y    ','D434.jpg',0,-229200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:30:57','2020-09-25 16:22:27'),
+(-433,'(｢木･ω･哥)｢嘿','D433.jpg',0,-266400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:04:21','2020-09-25 16:22:27'),
+(-432,'为了你','D432.jpg',0,-260000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:39:48','2020-09-25 16:22:27'),
+(-431,'Love ?','D431.jpg',0,-135200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:27:43','2020-09-25 16:22:27'),
+(-430,'y@pr@k','D430.jpg',0,-192000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 08:25:31','2020-09-25 16:22:27'),
+(-429,'麦合木提0997','D429.jpg',0,-164400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:30:00','2020-09-25 16:22:27'),
+(-428,'~ Ꭶ࿆ ?','D428.jpg',0,-146400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:28:30','2020-09-25 16:22:27'),
+(-427,'黑夜使者','D427.jpg',0,-188800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:36:41','2020-09-25 16:22:27'),
+(-426,'ʟɪғᴇ.... ᴘᴇʀғᴜᴍᴇ','D426.jpg',0,-227600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:31:06','2020-09-25 16:22:27'),
+(-425,'永远爱你','D425.jpg',0,-208400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:24:17','2020-09-25 16:22:27'),
+(-424,'巴朗子 QeSTAy','D424.jpg',0,-271200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:25:10','2020-09-25 16:22:27'),
+(-423,'虐待的爱情','D423.jpg',0,-218800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:43:00','2020-09-25 16:22:27'),
+(-422,'dji  suya    jinm','D422.jpg',0,-152800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:29:36','2020-09-25 16:22:27'),
+(-421,'.ใ๑νεืิ࿐愛ღ你༻.','D421.jpg',0,-199600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:34:31','2020-09-25 16:22:27'),
+(-420,'爱你___GUNAMU','D420.jpg',0,-100400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:04:03','2020-09-25 16:22:27'),
+(-419,'$ R','D419.jpg',0,-235600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:54:25','2020-09-25 16:22:27'),
+(-418,'梦游','D418.jpg',0,-240800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:41:30','2020-09-25 16:22:27'),
+(-417,'надоедать','D417.jpg',0,-190000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:41:12','2020-09-25 16:22:27'),
+(-416,'图尔荪','D416.jpg',0,-142400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:05:13','2020-09-25 16:22:27'),
+(-415,'麦吾兰 .007','D415.jpg',0,-239200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:38:41','2020-09-25 16:22:27'),
+(-414,'阿不力克木','D414.jpg',0,-146000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:43:42','2020-09-25 16:22:27'),
+(-413,'无耻的','D413.jpg',0,-208400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:58:06','2020-09-25 16:22:27'),
+(-412,'?王子?','D412.jpg',0,-208000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:42:12','2020-09-25 16:22:27'),
+(-411,'艾力','D411.jpg',0,-189200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:02:08','2020-09-25 16:22:27'),
+(-410,'oynaxma','D410.jpg',0,-201600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:47:53','2020-09-25 16:22:27'),
+(-409,'༊ℓℴѵℯ࿐','D409.jpg',0,-128400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 12:36:07','2020-09-25 16:22:27'),
+(-408,'?SewYuRim?','D408.jpg',0,-252000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:53:30','2020-09-25 16:22:27'),
+(-407,'?隨着酒意過一生','D407.jpg',0,-158400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 09:22:17','2020-09-25 16:22:27'),
+(-406,'?A?','D406.jpg',0,-234000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:27:43','2020-09-25 16:22:27'),
+(-405,'木合塔尔  江','D405.jpg',0,-200400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:39:37','2020-09-25 16:22:27'),
+(-404,'Very  ?','D404.jpg',0,-215600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:11:17','2020-09-25 16:22:27'),
+(-403,'?sar dar ','D403.jpg',0,-260000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:25:47','2020-09-25 16:22:27'),
+(-402,'.......uf .算。了。吧','D402.jpg',0,-259200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:37:17','2020-09-25 16:22:27'),
+(-401,'叫爹\\\\\\\\\\\\','D401.jpg',0,-187600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:31:26','2020-09-25 16:22:27'),
+(-400,'áℳ࿆࿆ℜⅈིkⅈིℳ࿆࿆³','D400.jpg',0,-201600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:27:49','2020-09-25 16:22:27'),
+(-399,'ئۈمۈد','D399.jpg',0,-262000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:49:33','2020-09-25 16:22:27'),
+(-398,'NT','D398.jpg',0,-261600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:40:35','2020-09-25 16:22:27'),
+(-397,'唯心baby儿','D397.jpg',0,-224800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 09:27:25','2020-09-25 16:22:27'),
+(-396,'【努力彦】','D396.jpg',0,-232400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:58:16','2020-09-25 16:22:27'),
+(-395,'йдРЯдΤ','D395.jpg',0,-201200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:55:00','2020-09-25 16:22:27'),
+(-394,'哥WaKXi aSki','D394.jpg',0,-132000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:32:50','2020-09-25 16:22:27'),
+(-393,'__________','D393.jpg',0,-282800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:58:55','2020-09-25 16:22:27'),
+(-392,'?san   ciz','D392.jpg',0,-210400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:53:34','2020-09-25 16:22:27'),
+(-391,'伊力亚斯。尼亚孜','D391.jpg',0,-128800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:41:51','2020-09-25 16:22:27'),
+(-390,'阿布都拉·吾买你 0997','D390.jpg',0,-144000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:28:46','2020-09-25 16:22:27'),
+(-389,'འཇརའམ','D389.jpg',0,-243600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:55:50','2020-09-25 16:22:27'),
+(-388,'?＋！','D388.jpg',0,-153600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:33:54','2020-09-25 16:22:27'),
+(-387,'?渣哥哥?','D387.jpg',0,-151200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:04:27','2020-09-25 16:22:27'),
+(-386,' Fõrεωεr','D386.jpg',0,-95600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:49:46','2020-09-25 16:22:27'),
+(-385,'爱 ℳěχ づ _ོ~イぴF! ','D385.jpg',0,-312000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:42:50','2020-09-25 16:22:27'),
+(-384,'一笑而过','D384.jpg',0,-230800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:42:49','2020-09-25 16:22:27'),
+(-383,'我陪你一世','D383.jpg',0,-241200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:38:04','2020-09-25 16:22:27'),
+(-382,'也比拉','D382.jpg',0,-219600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:43:36','2020-09-25 16:22:27'),
+(-381,'玉苏普。热合曼','D381.jpg',0,-144000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:38:27','2020-09-25 16:22:27'),
+(-380,'LonIy    . ?','D380.jpg',0,-114000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:28:57','2020-09-25 16:22:27'),
+(-379,'为了自己','D379.jpg',0,-219200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:59:03','2020-09-25 16:22:27'),
+(-378,'尼亚孜78','D378.jpg',0,-239200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:59:26','2020-09-25 16:22:27'),
+(-377,'爱你 dima  爱人 ba ','D377.jpg',0,-92800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:24:26','2020-09-25 16:22:27'),
+(-376,'LUCKY','D376.jpg',0,-146400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:51:56','2020-09-25 16:22:27'),
+(-375,'图尔逊','D375.jpg',0,-157600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:34:17','2020-09-25 16:22:27'),
+(-374,'·......｜ ⃢? ?⃢ ｜','D374.jpg',0,-273600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 08:44:29','2020-09-25 16:22:27'),
+(-373,'赛买江','D373.jpg',0,-225200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 12:34:41','2020-09-25 16:22:27'),
+(-372,'Love the wrong?','D372.jpg',0,-181600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:16:00','2020-09-25 16:22:27'),
+(-371,'미친놈','D371.jpg',0,-68000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:17:03','2020-09-25 16:22:27'),
+(-370,'阿不力克木','D370.jpg',0,-152800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:27:20','2020-09-25 16:22:27'),
+(-369,'回忆！','D369.jpg',0,-187200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:55:01','2020-09-25 16:22:27'),
+(-368,'（心已碎）','D368.jpg',0,-245600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:10:35','2020-09-25 16:22:27'),
+(-367,'MamATJAn?','D367.jpg',0,-164400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:02:51','2020-09-25 16:22:27'),
+(-366,'꧁áℳ࿆࿆ℜⅈིkⅈིℳ࿆','D366.jpg',0,-190000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:13:03','2020-09-25 16:22:27'),
+(-365,'＜孤独的心＞','D365.jpg',0,-185200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:42:24','2020-09-25 16:22:27'),
+(-364,'?小艾?','D364.jpg',0,-161200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:47:12','2020-09-25 16:22:27'),
+(-363,'arla sahlamlik','D363.jpg',0,-243200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 08:24:17','2020-09-25 16:22:27'),
+(-362,'H@y@Tim  c@an','D362.jpg',0,-198800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:46:45','2020-09-25 16:22:27'),
+(-361,'LOVE YUU','D361.jpg',0,-178800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:46:33','2020-09-25 16:22:27'),
+(-360,'幸福。','D360.jpg',0,-213200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:21:18','2020-09-25 16:22:27'),
+(-359,'心醉才懂','D359.jpg',0,-169600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:51:01','2020-09-25 16:22:27'),
+(-358,'单身白马王子','D358.jpg',0,-147600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:49:54','2020-09-25 16:22:27'),
+(-357,'ΖμΜ-ΖμΜ','D357.jpg',0,-61600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:50:51','2020-09-25 16:22:27'),
+(-356,'OΜAR-JAN','D356.jpg',0,-102800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:08:18','2020-09-25 16:22:27'),
+(-355,'༺ཌ࿇Ä࿇ད༻','D355.jpg',0,-185600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:04:21','2020-09-25 16:22:27'),
+(-354,'吾扎依尔','D354.jpg',0,-123200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:49:08','2020-09-25 16:22:27'),
+(-353,'么ྀൢ么ྀൢ哒ྀൢ','D353.jpg',0,-210400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:02:59','2020-09-25 16:22:27'),
+(-352,'麦合木提江','D352.jpg',0,-108800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 12:49:15','2020-09-25 16:22:27'),
+(-351,'樢','D351.jpg',0,-94400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:50:08','2020-09-25 16:22:27'),
+(-350,'儿子娃娃。','D350.jpg',0,-154400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:16:08','2020-09-25 16:22:27'),
+(-349,'weysaliy','D349.jpg',0,-306000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:33:28','2020-09-25 16:22:27'),
+(-348,'ΗUΜ@RiΜ','D348.jpg',0,-196400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:34:08','2020-09-25 16:22:27'),
+(-347,'꧁꫞꯭F O X꫞꧂','D347.jpg',0,-219600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:09:08','2020-09-25 16:22:27'),
+(-346,'Ï$$ÏζγÅχÄ','D346.jpg',0,-196000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:36:32','2020-09-25 16:22:27'),
+(-345,'SOSAY *','D345.jpg',0,-204400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:32:21','2020-09-25 16:22:27'),
+(-344,'OY NAXMA ','D344.jpg',0,-148800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 06:33:36','2020-09-25 16:22:27'),
+(-343,'开心就好?','D343.jpg',0,-174000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:34:12','2020-09-25 16:22:27'),
+(-342,'小艾','D342.jpg',0,-258800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:34:03','2020-09-25 16:22:27'),
+(-341,'?吐尔逊古丽?','D341.jpg',0,-157200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:34:12','2020-09-25 16:22:27'),
+(-340,'Arman','D340.jpg',0,-139200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:57:09','2020-09-25 16:22:27'),
+(-339,'我方正在想你.........','D339.jpg',0,-200000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:01:18','2020-09-25 16:22:27'),
+(-338,'塔山','D338.jpg',0,-198800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:37:17','2020-09-25 16:22:27'),
+(-337,'唯一','D337.jpg',0,-55200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:52:20','2020-09-25 16:22:27'),
+(-336,'elHam ?','D336.jpg',0,-138800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:28:42','2020-09-25 16:22:27'),
+(-335,'龙鱼','D335.jpg',0,-256400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:04:01','2020-09-25 16:22:27'),
+(-334,'.  ','D334.jpg',0,-236800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:40:46','2020-09-25 16:22:27'),
+(-333,'为了你N+A','D333.jpg',0,-226400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:51:25','2020-09-25 16:22:27'),
+(-332,'꧁@.不要说分手.꧂','D332.jpg',0,-208000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:05:34','2020-09-25 16:22:27'),
+(-331,'?ELxT_1.10?','D331.jpg',0,-292800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:53:04','2020-09-25 16:22:27'),
+(-330,'༂Ñ࿐','D330.jpg',0,-148800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:51:01','2020-09-25 16:22:27'),
+(-329,'努总','D329.jpg',0,-196800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:10:27','2020-09-25 16:22:27'),
+(-328,'渣男','D328.jpg',0,-162000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:36:32','2020-09-25 16:22:27'),
+(-327,'一辈子','D327.jpg',0,-261600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:39:02','2020-09-25 16:22:27'),
+(-326,'?社会?','D326.jpg',0,-256000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:34:10','2020-09-25 16:22:27'),
+(-325,'阿迪llllll','D325.jpg',0,-264000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:25:59','2020-09-25 16:22:27'),
+(-324,'༄ N.','D324.jpg',0,-187600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:58:13','2020-09-25 16:22:27'),
+(-323,'꧁ ൢβã ࿆ℜï βï࿆ℜൢ','D323.jpg',0,-195600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:35:54','2020-09-25 16:22:27'),
+(-322,'?算了吧','D322.jpg',0,-122800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:38:57','2020-09-25 16:22:27'),
+(-321,'阿布','D321.jpg',0,-294800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:32:59','2020-09-25 16:22:27'),
+(-320,'半睡半醒的梦','D320.jpg',0,-189600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:04:22','2020-09-25 16:22:27'),
+(-319,'王子','D319.jpg',0,-147600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:54:10','2020-09-25 16:22:27'),
+(-318,'Ðჟ҉๛ჟǎんǎηฟăŽ_哥王','D318.jpg',0,-155200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:33:01','2020-09-25 16:22:27'),
+(-317,'꧁___ⅅɑℜ丶 ོⅅⅈℳ___꧂','D317.jpg',0,-137600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:54:14','2020-09-25 16:22:27'),
+(-316,'ŠáℜåĞβαĞĞǐ','D316.jpg',0,-99600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-03 19:58:56','2020-09-25 16:22:27'),
+(-315,'$£WGM','D315.jpg',0,-109600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:57:30','2020-09-25 16:22:27'),
+(-314,'ღ᭄Šòýàℜ༆ℳěχღ','D314.jpg',0,-179200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:53:13','2020-09-25 16:22:27'),
+(-313,'Tell Me','D313.jpg',0,-208000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:31:24','2020-09-25 16:22:27'),
+(-312,'where','D312.jpg',0,-170400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 09:54:25','2020-09-25 16:22:27'),
+(-311,'爱你一生','D311.jpg',0,-198800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:56:28','2020-09-25 16:22:27'),
+(-310,'爱到最后','D310.jpg',0,-208800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:07:02','2020-09-25 16:22:27'),
+(-309,'爱克','D309.jpg',0,-226400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:23:17','2020-09-25 16:22:27'),
+(-308,'?？','D308.jpg',0,-129600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:55:39','2020-09-25 16:22:27'),
+(-307,'꧁死心꧂','D307.jpg',0,-250400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 01:08:35','2020-09-25 16:22:27'),
+(-306,'KAQMIXIM','D306.jpg',0,-152800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:57:35','2020-09-25 16:22:27'),
+(-305,'温暖的心?','D305.jpg',0,-221600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:28:37','2020-09-25 16:22:27'),
+(-304,'м\'ゞ_________','D304.jpg',0,-273200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 08:47:32','2020-09-25 16:22:27'),
+(-303,'bir danam','D303.jpg',0,-181200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:19:15','2020-09-25 16:22:27'),
+(-302,'放下走了吗','D302.jpg',0,-148800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:10:14','2020-09-25 16:22:27'),
+(-301,'难忘的一天','D301.jpg',0,-258800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:41:09','2020-09-25 16:22:27'),
+(-300,'osmanjan','D300.jpg',0,-278000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:52:22','2020-09-25 16:22:27'),
+(-299,'wijdan, bilan, yaxa','D299.jpg',0,-167200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 02:04:30','2020-09-25 16:22:27'),
+(-298,'阿迪力','D298.jpg',0,-182400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:57:01','2020-09-25 16:22:27'),
+(-297,'R～女装批发','D297.jpg',0,-248400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:59:28','2020-09-25 16:22:27'),
+(-296,'S','D296.jpg',0,-170800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:15:54','2020-09-25 16:22:27'),
+(-295,'赛买提。288','D295.jpg',0,-122400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:55:01','2020-09-25 16:22:27'),
+(-294,'社会你爹妈','D294.jpg',0,-154000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 16:55:01','2020-09-25 16:22:27'),
+(-293,'· ＆','D293.jpg',0,-237200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:05:58','2020-09-25 16:22:27'),
+(-292,'帅气','D292.jpg',0,-191200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:26:36','2020-09-25 16:22:27'),
+(-291,'？','D291.jpg',0,-138800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:18:26','2020-09-25 16:22:27'),
+(-290,'T-?','D290.jpg',0,-198400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:02:36','2020-09-25 16:22:27'),
+(-289,'库尔班江 0996','D289.jpg',0,-130000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:51:22','2020-09-25 16:22:27'),
+(-288,'一切为了你','D288.jpg',0,-194000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:52:49','2020-09-25 16:22:27'),
+(-287,'一生一世?','D287.jpg',0,-198000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:15:54','2020-09-25 16:22:27'),
+(-286,'一詀垨候','D286.jpg',0,-139200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:53:13','2020-09-25 16:22:27'),
+(-285,'?____________Jõйiℳ','D285.jpg',0,-156000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:07:04','2020-09-25 16:22:27'),
+(-284,'买买提阿布拉江','D284.jpg',0,-312400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:00:46','2020-09-25 16:22:27'),
+(-283,'高兴','D283.jpg',0,-189600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 06:50:34','2020-09-25 16:22:27'),
+(-282,'LOVE YUU','D282.jpg',0,-136400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:35:59','2020-09-25 16:22:27'),
+(-281,'Ð','D281.jpg',0,-231200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:02:58','2020-09-25 16:22:27'),
+(-280,'ღ ℜαуíℳýõк???','D280.jpg',0,-234000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:54:07','2020-09-25 16:22:27'),
+(-279,'艾力 库尔班','D279.jpg',0,-192400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:19:45','2020-09-25 16:22:27'),
+(-278,'给你所有の小幸福?','D278.jpg',0,-138400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:25:43','2020-09-25 16:22:27'),
+(-277,'有胆子就玩','D277.jpg',0,-94000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:01:24','2020-09-25 16:22:27'),
+(-276,'｛依li亚R｝','D276.jpg',0,-169200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:05:44','2020-09-25 16:22:27'),
+(-275,'天使的诱惑','D275.jpg',0,-179200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:39:36','2020-09-25 16:22:27'),
+(-274,'ℜαℽïℳℽoིk','D274.jpg',0,-154400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:26:55','2020-09-25 16:22:27'),
+(-273,'突然好想你','D273.jpg',0,-286800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:25:42','2020-09-25 16:22:27'),
+(-272,'??','D272.jpg',0,-206000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:28:05','2020-09-25 16:22:27'),
+(-271,'__________A__________','D271.jpg',0,-232400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:28:03','2020-09-25 16:22:27'),
+(-270,'dilmurat ','D270.jpg',0,-294400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:32:46','2020-09-25 16:22:27'),
+(-269,'艾克拜尔','D269.jpg',0,-136800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:54:48','2020-09-25 16:22:27'),
+(-268,' KuRaMiZ','D268.jpg',0,-116800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:37:28','2020-09-25 16:22:27'),
+(-267,'༆ིℜǎη༄jÎℳǎཽྃ心','D267.jpg',0,-161200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:17:15','2020-09-25 16:22:27'),
+(-266,'༊྄ཻ࿆Ꭿོ࿆ℬ࿆ℜ࿆ℽ࿆༅࿐๓','D266.jpg',0,-192800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:29:14','2020-09-25 16:22:27'),
+(-265,'阿力木江','D265.jpg',0,-254800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:57:54','2020-09-25 16:22:27'),
+(-264,'艾克热木','D264.jpg',0,-140800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:08:58','2020-09-25 16:22:27'),
+(-263,'劇唻諟','D263.jpg',0,-275600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 06:53:43','2020-09-25 16:22:27'),
+(-262,'ArMaNiM','D262.jpg',0,-167200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:37:01','2020-09-25 16:22:27'),
+(-261,'ESEL','D261.jpg',0,-232400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:18:34','2020-09-25 16:22:27'),
+(-260,'んaŸaㄒįℳ³','D260.jpg',0,-179600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:59:29','2020-09-25 16:22:27'),
+(-259,'йξℜì^o^Tuℜá','D259.jpg',0,-116400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:34:06','2020-09-25 16:22:27'),
+(-258,'阿迪力江','D258.jpg',0,-291600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:16:59','2020-09-25 16:22:27'),
+(-257,'ℒℴvℯ࿐','D257.jpg',0,-203200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:07:23','2020-09-25 16:22:27'),
+(-256,'BAGZAD','D256.jpg',0,-236000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:29:28','2020-09-25 16:22:27'),
+(-255,'麦麦提图尔荪','D255.jpg',0,-198400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:24:49','2020-09-25 16:22:27'),
+(-254,'居买 尼亚孜 ','D254.jpg',0,-182800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:31:47','2020-09-25 16:22:27'),
+(-253,'?Pнoꫀꫛχ\'࿐?','D253.jpg',0,-216800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:54:21','2020-09-25 16:22:27'),
+(-252,'Beauty','D252.jpg',0,-172400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:02:23','2020-09-25 16:22:27'),
+(-251,'永远18岁','D251.jpg',0,-211600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:42:10','2020-09-25 16:22:27'),
+(-250,'拜合提亚尔','D250.jpg',0,-143600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:03:30','2020-09-25 16:22:27'),
+(-249,'?孤独的雄鹰??','D249.jpg',0,-168400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:00:19','2020-09-25 16:22:27'),
+(-248,'蘢ベ?','D248.jpg',0,-255200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:09:22','2020-09-25 16:22:27'),
+(-247,'梦中的婚礼','D247.jpg',0,-158000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:11:06','2020-09-25 16:22:27'),
+(-246,'J.RT','D246.jpg',0,-218400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:53:28','2020-09-25 16:22:27'),
+(-245,'哥的名你不懂','D245.jpg',0,-198800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:51:34','2020-09-25 16:22:27'),
+(-244,'๓-Ꭿོ _ℓᵒᵛᵉᵧₒᵤ_ღ','D244.jpg',0,-215600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:02:21','2020-09-25 16:22:27'),
+(-243,':-C＠n:-Cz','D243.jpg',0,-249600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:02:33','2020-09-25 16:22:27'),
+(-242,'Dance |EA7','D242.jpg',0,-171200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:56:34','2020-09-25 16:22:27'),
+(-241,'新的一步','D241.jpg',0,-165600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:58:28','2020-09-25 16:22:27'),
+(-240,'℡___阿不来提','D240.jpg',0,-212400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:24:26','2020-09-25 16:22:27'),
+(-239,'爱克热木','D239.jpg',0,-191200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:43:05','2020-09-25 16:22:27'),
+(-238,'a__ོღ ℒℴѵℯ ღ__ོe','D238.jpg',0,-227600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:13:51','2020-09-25 16:22:27'),
+(-237,'梦中的爱','D237.jpg',0,-190400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:28:13','2020-09-25 16:22:27'),
+(-236,'Qesmer','D236.jpg',0,-240400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:29:58','2020-09-25 16:22:27'),
+(-235,'心里san 8','D235.jpg',0,-201200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:25:13','2020-09-25 16:22:27'),
+(-234,'我的幸福 ','D234.jpg',0,-204800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:47:01','2020-09-25 16:22:27'),
+(-233,'Ko.ZaM','D233.jpg',0,-249200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:31:04','2020-09-25 16:22:27'),
+(-232,' Mr ','D232.jpg',0,-230800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:30:09','2020-09-25 16:22:27'),
+(-231,'阿迪力','D231.jpg',0,-192800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:25:44','2020-09-25 16:22:27'),
+(-230,'ablik!m ?','D230.jpg',0,-258000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:28:51','2020-09-25 16:22:27'),
+(-229,'依尔番','D229.jpg',0,-232000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:12:05','2020-09-25 16:22:27'),
+(-228,'КiℜåК åℳåŠ','D228.jpg',0,-233200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:39:34','2020-09-25 16:22:27'),
+(-227,'ℳⅰSྂsℽoི','D227.jpg',0,-311600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:08:20','2020-09-25 16:22:27'),
+(-226,'α_+_z','D226.jpg',0,-243600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:28:05','2020-09-25 16:22:27'),
+(-225,'这些日子S过去','D225.jpg',0,-215600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:05:59','2020-09-25 16:22:27'),
+(-224,'哥的样子学不会','D224.jpg',0,-206800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:18:25','2020-09-25 16:22:27'),
+(-223,'卡依尔江','D223.jpg',0,-275600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:06:34','2020-09-25 16:22:27'),
+(-222,'嫑、','D222.jpg',0,-222800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:23:27','2020-09-25 16:22:27'),
+(-221,'A t A w U l L A ','D221.jpg',0,-200000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:16:21','2020-09-25 16:22:27'),
+(-220,'NืุUืุRืุ','D220.jpg',0,-218800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:22:04','2020-09-25 16:22:27'),
+(-219,'Šùýàℜℳěχ?','D219.jpg',0,-150800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:45:13','2020-09-25 16:22:27'),
+(-218,'阿尤甫','D218.jpg',0,-152400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:59:05','2020-09-25 16:22:27'),
+(-217,'MM','D217.jpg',0,-178000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:19:51','2020-09-25 16:22:27'),
+(-216,'亲爱的男','D216.jpg',0,-155600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:48:05','2020-09-25 16:22:27'),
+(-215,'musajan','D215.jpg',0,-190000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:04:47','2020-09-25 16:22:27'),
+(-214,'伤不起','D214.jpg',0,-233600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:59:43','2020-09-25 16:22:27'),
+(-213,'Lemonat 。','D213.jpg',0,-229200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:06:58','2020-09-25 16:22:27'),
+(-212,'海依赛尔','D212.jpg',0,-190800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:29:49','2020-09-25 16:22:27'),
+(-211,'巴 哥 ? 。','D211.jpg',0,-218800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:14:01','2020-09-25 16:22:27'),
+(-210,'梦想','D210.jpg',0,-258400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:51:17','2020-09-25 16:22:27'),
+(-209,'遥远的未来','D209.jpg',0,-140000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:07:38','2020-09-25 16:22:27'),
+(-208,'忘！','D208.jpg',0,-251200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:18:19','2020-09-25 16:22:27'),
+(-207,'笑着活','D207.jpg',0,-208800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:37:11','2020-09-25 16:22:27'),
+(-206,'哥_____oㄚηàㄗ____χÚ----?','D206.jpg',0,-218400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:31:38','2020-09-25 16:22:27'),
+(-205,'艾力江.麦麦提','D205.jpg',0,-169200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:10:44','2020-09-25 16:22:27'),
+(-204,'依力汗木。','D204.jpg',0,-157600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:16:03','2020-09-25 16:22:27'),
+(-203,'沙拉木','D203.jpg',0,-233600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:31:43','2020-09-25 16:22:27'),
+(-202,'安暖盛夏夜未央','D202.jpg',0,-154000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:51:55','2020-09-25 16:22:27'),
+(-201,'麦提尼亚孜0997','D201.jpg',0,-248000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:26:03','2020-09-25 16:22:27'),
+(-200,'Kaysar','D200.jpg',0,-185200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:45:25','2020-09-25 16:22:27'),
+(-199,'阿卜杜喀哈尔','D199.jpg',0,-256800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:40:16','2020-09-25 16:22:27'),
+(-198,'ئاينۇرى ','D198.jpg',0,-287600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:13:11','2020-09-25 16:22:27'),
+(-197,'بەختىم','D197.jpg',0,-266000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:06:54','2020-09-25 16:22:27'),
+(-196,'。。。。','D196.jpg',0,-244800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:05:33','2020-09-25 16:22:27'),
+(-195,'sawda','D195.jpg',0,-254800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:46:31','2020-09-25 16:22:27'),
+(-194,'迪力夏提','D194.jpg',0,-330000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:11:26','2020-09-25 16:22:27'),
+(-193,'TanHa ','D193.jpg',0,-198800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:15:38','2020-09-25 16:22:27'),
+(-192,'sardar','D192.jpg',0,-226800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:40:43','2020-09-25 16:22:27'),
+(-191,'βǎgωαメ','D191.jpg',0,-272800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:28:53','2020-09-25 16:22:27'),
+(-190,'MANGGU','D190.jpg',0,-149600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:11:12','2020-09-25 16:22:27'),
+(-189,'abdusalam','D189.jpg',0,-141600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:46:20','2020-09-25 16:22:27'),
+(-188,'вíвαвo','D188.jpg',0,-214800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:40:16','2020-09-25 16:22:27'),
+(-187,'13Ᏼ࿆αིнτᎥྀ๓る14','D187.jpg',0,-144800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:17:33','2020-09-25 16:22:27'),
+(-186,'Ꭿོ࿆ℬ࿆ℜ࿆o࿆ℽ_______࿆༅','D186.jpg',0,-178800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:34:43','2020-09-25 16:22:27'),
+(-185,'ღ࿐为了她࿐ღ','D185.jpg',0,-113200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:03:31','2020-09-25 16:22:27'),
+(-184,'命中注定','D184.jpg',0,-151200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:58:51','2020-09-25 16:22:27'),
+(-183,' aSLap_SiNi','D183.jpg',0,-163600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:30:29','2020-09-25 16:22:27'),
+(-182,'Aℳ࿆࿆ℜⅈིkⅈིℳ⅓¼','D182.jpg',0,-246800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:19:24','2020-09-25 16:22:27'),
+(-181,'艾斯凯尔江?','D181.jpg',0,-330800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:55:33','2020-09-25 16:22:27'),
+(-180,'karem','D180.jpg',0,-236400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:51:42','2020-09-25 16:22:27'),
+(-179,'ahmat 147?','D179.jpg',0,-156000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:02:13','2020-09-25 16:22:27'),
+(-178,'utkan kunla','D178.jpg',0,-180000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:14:14','2020-09-25 16:22:27'),
+(-177,'艾斯凯尔江?','D177.jpg',0,-195200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:14:36','2020-09-25 16:22:27'),
+(-176,'买买提','D176.jpg',0,-206000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:57:29','2020-09-25 16:22:27'),
+(-175,'ŠáÐαΜ','D175.jpg',0,-234800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:17:55','2020-09-25 16:22:27'),
+(-174,'๛Šôýa࿐jℯηེ!ℳ๛','D174.jpg',0,-146400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:02:46','2020-09-25 16:22:27'),
+(-173,'坏男孩','D173.jpg',0,-195600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:06:37','2020-09-25 16:22:27'),
+(-172,'尤。。。','D172.jpg',0,-202000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:08:49','2020-09-25 16:22:27'),
+(-171,'SྂℯωGIℳღ','D171.jpg',0,-212400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:11:53','2020-09-25 16:22:27'),
+(-170,'麦麦提江','D170.jpg',0,-200800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:04:08','2020-09-25 16:22:27'),
+(-169,'karem','D169.jpg',0,-241600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:43:10','2020-09-25 16:22:27'),
+(-168,'干净的 Oyna ','D168.jpg',0,-252400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:26:34','2020-09-25 16:22:27'),
+(-167,'EA7','D167.jpg',0,-150000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:01:45','2020-09-25 16:22:27'),
+(-166,'jasur','D166.jpg',0,-291600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:11:51','2020-09-25 16:22:27'),
+(-165,'NaRMY ____ ','D165.jpg',0,-181200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:35:41','2020-09-25 16:22:27'),
+(-164,'命运','D164.jpg',0,-226400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 02:25:01','2020-09-25 16:22:27'),
+(-163,'男人不坏女人不爱','D163.jpg',0,-167200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:49:55','2020-09-25 16:22:27'),
+(-162,'~ 每天想你 @','D162.jpg',0,-163600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:27:31','2020-09-25 16:22:27'),
+(-161,'爱你一万年','D161.jpg',0,-140400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:51:49','2020-09-25 16:22:27'),
+(-160,'阿布拉','D160.jpg',0,-244000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 13:04:42','2020-09-25 16:22:27'),
+(-159,'MAMATJAN','D159.jpg',0,-268800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 07:04:14','2020-09-25 16:22:27'),
+(-158,'Heart','D158.jpg',0,-194000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:17:20','2020-09-25 16:22:27'),
+(-157,'Your eyes','D157.jpg',0,-218800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 07:39:44','2020-09-25 16:22:27'),
+(-156,'哥___ฟคxX!__ǒℳαK','D156.jpg',0,-126000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 08:59:00','2020-09-25 16:22:27'),
+(-155,'我的爱','D155.jpg',0,-182000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:10:59','2020-09-25 16:22:27'),
+(-154,'我爱你??','D154.jpg',0,-217200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:11:11','2020-09-25 16:22:27'),
+(-153,'?zibinur?','D153.jpg',0,-146800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:01:18','2020-09-25 16:22:27'),
+(-152,'βаℜじёK iℳ*彡','D152.jpg',0,-183200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:14:30','2020-09-25 16:22:27'),
+(-151,'ℜᎯི྆ℽiℳྀೄℽǒк','D151.jpg',0,-114800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:16:13','2020-09-25 16:22:27'),
+(-150,'ℒฺℴฺνℯฺ࿐','D150.jpg',0,-140000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:09:53','2020-09-25 16:22:27'),
+(-149,'aslima','D149.jpg',0,-256400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:12:50','2020-09-25 16:22:27'),
+(-148,'MaMaT ili','D148.jpg',0,-76800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:41:40','2020-09-25 16:22:27'),
+(-147,'哥,ฟāXXǐ, ǒℳǎK','D147.jpg',0,-200400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:15:45','2020-09-25 16:22:27'),
+(-146,'SāηMēηǐG','D146.jpg',0,-202400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:11:34','2020-09-25 16:22:27'),
+(-145,'莫合旦尔','D145.jpg',0,-206800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 02:29:12','2020-09-25 16:22:27'),
+(-144,'ⅅⅈじ෴ฟǎ丫ℜǎη','D144.jpg',0,-261200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:56:40','2020-09-25 16:22:27'),
+(-143,'んびℳǎℜîℳ る','D143.jpg',0,-156400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:10:23','2020-09-25 16:22:27'),
+(-142,'??我爱你一生E','D142.jpg',0,-282400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:13:54','2020-09-25 16:22:27'),
+(-141,'.','D141.jpg',0,-160400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:01:41','2020-09-25 16:22:27'),
+(-140,'?ღ ⁵²⁰ ღ?ℒℴѵℯ','D140.jpg',0,-198000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:19:03','2020-09-25 16:22:27'),
+(-139,'帕提古丽·麦提图尔荪','D139.jpg',0,-158400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:19:18','2020-09-25 16:22:27'),
+(-138,'almj.','D138.jpg',0,-166000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 02:31:01','2020-09-25 16:22:27'),
+(-137,' 爱我的人也会出来的。?','D137.jpg',0,-174800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:32:07','2020-09-25 16:22:27'),
+(-136,'无所谓','D136.jpg',0,-250400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:05:13','2020-09-25 16:22:27'),
+(-135,' 喀哈尔 玉苏普','D135.jpg',0,-128400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:44:25','2020-09-25 16:22:27'),
+(-134,'사랑해요','D134.jpg',0,-144000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:56:17','2020-09-25 16:22:27'),
+(-133,'?......S......','D133.jpg',0,-208000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:57:00','2020-09-25 16:22:27'),
+(-132,'suygu','D132.jpg',0,-275600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:01:57','2020-09-25 16:22:27'),
+(-131,'调皮','D131.jpg',0,-190400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:31:52','2020-09-25 16:22:27'),
+(-130,'Tǎη ～ TǎK    ','D130.jpg',0,-194400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:18:01','2020-09-25 16:22:27'),
+(-129,'爱久便旧','D129.jpg',0,-260400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:08:56','2020-09-25 16:22:27'),
+(-128,'忍','D128.jpg',0,-216000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:13:24','2020-09-25 16:22:27'),
+(-127,'情殇','D127.jpg',0,-214000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:48:52','2020-09-25 16:22:27'),
+(-126,'?WiLeY ?','D126.jpg',0,-219600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:18:11','2020-09-25 16:22:27'),
+(-125,'白玫瑰','D125.jpg',0,-226000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:14:33','2020-09-25 16:22:27'),
+(-124,'瘾','D124.jpg',0,-154000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:11:49','2020-09-25 16:22:27'),
+(-123,'滚假爱','D123.jpg',0,-239200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:55:45','2020-09-25 16:22:27'),
+(-122,'去.XAN. 买.....3........','D122.jpg',0,-184000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:13:46','2020-09-25 16:22:27'),
+(-121,'hghfbf','D121.jpg',0,-244400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:49:43','2020-09-25 16:22:27'),
+(-120,'我爱你??','D120.jpg',0,-294800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:03:07','2020-09-25 16:22:27'),
+(-119,'阿布都外力江','D119.jpg',0,-182000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:04:03','2020-09-25 16:22:27'),
+(-118,'ζัβǎℜ!＊β!ℜ','D118.jpg',0,-172800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:44:21','2020-09-25 16:22:27'),
+(-117,'难忘的一天','D117.jpg',0,-174800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:46:46','2020-09-25 16:22:27'),
+(-116,'挑战不可能 ?艾总 ?','D116.jpg',0,-154000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:40:02','2020-09-25 16:22:27'),
+(-115,'局尔艾提江','D115.jpg',0,-222000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:15:43','2020-09-25 16:22:27'),
+(-114,'ℜᎯི྆ℽiℳྀೄℽǒк','D114.jpg',0,-131200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 13:12:57','2020-09-25 16:22:27'),
+(-113,'ZAR;-你bizr我','D113.jpg',0,-96800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:24:35','2020-09-25 16:22:27'),
+(-112,' _aMDi_βola_ ','D112.jpg',0,-212400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:50:11','2020-09-25 16:22:27'),
+(-111,'0999bahit','D111.jpg',0,-287200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 07:23:57','2020-09-25 16:22:27'),
+(-110,'༺想飞༻㎕࿐','D110.jpg',0,-261200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:45:33','2020-09-25 16:22:27'),
+(-109,'nafisa','D109.jpg',0,-199200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:20:32','2020-09-25 16:22:27'),
+(-108,'孤独?的鹰','D108.jpg',0,-244800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:24:08','2020-09-25 16:22:27'),
+(-107,'哥,ฟāXXǐ, ǒℳǎK','D107.jpg',0,-240400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:21:58','2020-09-25 16:22:27'),
+(-106,'MaMaT ili','D106.jpg',0,-96400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:56:07','2020-09-25 16:22:27'),
+(-105,'骄傲','D105.jpg',0,-227200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:08:49','2020-09-25 16:22:27'),
+(-104,'ℒฺℴฺνℯฺ࿐','D104.jpg',0,-238000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:15:34','2020-09-25 16:22:27'),
+(-103,'SāηMēηǐG','D103.jpg',0,-238000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:10:30','2020-09-25 16:22:27'),
+(-102,'莫合旦尔','D102.jpg',0,-140400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:25:23','2020-09-25 16:22:27'),
+(-101,'ⅅⅈじ෴ฟǎ丫ℜǎη','D101.jpg',0,-296800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:57:22','2020-09-25 16:22:27'),
+(-100,'滚吧','D100.jpg',0,-371200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:16:38','2020-09-25 16:22:27'),
+(-99,'??我爱你一生E','D99.jpg',0,-201200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:56:40','2020-09-25 16:22:27'),
+(-98,'古丽拜克热木','D98.jpg',0,-216000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:25:45','2020-09-25 16:22:27'),
+(-97,'.','D97.jpg',0,-200400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:44:21','2020-09-25 16:22:27'),
+(-96,'?ღ ⁵²⁰ ღ?ℒℴѵℯ','D96.jpg',0,-227200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:16:49','2020-09-25 16:22:27'),
+(-95,'gulum','D95.jpg',0,-167600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:56:07','2020-09-25 16:22:27'),
+(-94,'小田田','D94.jpg',0,-194800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:16:31','2020-09-25 16:22:27'),
+(-93,'almj.','D93.jpg',0,-136400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:48:16','2020-09-25 16:22:27'),
+(-92,' 爱我的人也会出来的。?','D92.jpg',0,-140800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:27:22','2020-09-25 16:22:27'),
+(-91,'无所谓','D91.jpg',0,-160400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 02:29:10','2020-09-25 16:22:27'),
+(-90,' 喀哈尔 玉苏普','D90.jpg',0,-339200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:15:48','2020-09-25 16:22:27'),
+(-89,'KaLiP','D89.jpg',0,-154800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:46:59','2020-09-25 16:22:27'),
+(-88,'사랑해요','D88.jpg',0,-171200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:24:31','2020-09-25 16:22:27'),
+(-87,'?......S......','D87.jpg',0,-222000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:12:24','2020-09-25 16:22:27'),
+(-86,'...بەخىتلىك بىز ...','D86.jpg',0,-146400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 11:39:41','2020-09-25 16:22:27'),
+(-85,'永远爱你','D85.jpg',0,-159200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:08:59','2020-09-25 16:22:27'),
+(-84,'suygu','D84.jpg',0,-181600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:47:37','2020-09-25 16:22:27'),
+(-83,'Have  Ram?','D83.jpg',0,-122800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:43:43','2020-09-25 16:22:27'),
+(-82,'β!じ__Jåηiℳ','D82.jpg',0,-203200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:26:42','2020-09-25 16:22:27'),
+(-81,'TANHA ?','D81.jpg',0,-235600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 02:32:19','2020-09-25 16:22:27'),
+(-80,'依萨大爷','D80.jpg',0,-218800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:25:35','2020-09-25 16:22:27'),
+(-79,'哥的世界不懂','D79.jpg',0,-63200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:24:54','2020-09-25 16:22:27'),
+(-78,'βiL@L 王?','D78.jpg',0,-230400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:16:48','2020-09-25 16:22:27'),
+(-77,'ℋོ࿆   ₁₃¹⁴ 5²°?','D77.jpg',0,-175600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:56:37','2020-09-25 16:22:27'),
+(-76,'图尔荪江','D76.jpg',0,-190400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:59:52','2020-09-25 16:22:27'),
+(-75,'༊྄ཻℜᎯི྆ℽiℳྀೄℽǒк࿐','D75.jpg',0,-206400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:31:48','2020-09-25 16:22:27'),
+(-74,'بەخىت سەپىرى','D74.jpg',0,-320800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:23:04','2020-09-25 16:22:27'),
+(-73,'战狼','D73.jpg',0,-229200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:59:45','2020-09-25 16:22:27'),
+(-72,'心的  。1 。。38','D72.jpg',0,-166800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:19:27','2020-09-25 16:22:27'),
+(-71,'ℜaZiじ','D71.jpg',0,-165200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:15:48','2020-09-25 16:22:27'),
+(-70,'单身老虎','D70.jpg',0,-196800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:57:55','2020-09-25 16:22:27'),
+(-69,'为了你','D69.jpg',0,-255200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:13:52','2020-09-25 16:22:27'),
+(-68,' ? ? ? ? * * &','D68.jpg',0,-274000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:26:42','2020-09-25 16:22:27'),
+(-67,'如果有一天','D67.jpg',0,-183200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 15:57:17','2020-09-25 16:22:27'),
+(-66,'  麦麦提依力 ','D66.jpg',0,-225200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:54:57','2020-09-25 16:22:27'),
+(-65,'ئ‍ەلددار','D65.jpg',0,-258400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 02:44:26','2020-09-25 16:22:27'),
+(-64,'Bahit','D64.jpg',0,-235600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:19:09','2020-09-25 16:22:27'),
+(-63,'哥-__ฟคxX!B565','D63.jpg',0,-131600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 15:03:20','2020-09-25 16:22:27'),
+(-62,'阿 心','D62.jpg',0,-167200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:15:37','2020-09-25 16:22:27'),
+(-61,'吐尔孙江','D61.jpg',0,-172400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:07:40','2020-09-25 16:22:27'),
+(-60,'太来提','D60.jpg',0,-141600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:49:32','2020-09-25 16:22:27'),
+(-59,'小夏','D59.jpg',0,-221200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:38:51','2020-09-25 16:22:27'),
+(-58,'꧁ ꯭回꯭忆꯭꧂','D58.jpg',0,-218000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:20:46','2020-09-25 16:22:27'),
+(-57,'为了快乐。','D57.jpg',0,-220400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:09:26','2020-09-25 16:22:27'),
+(-56,'生活不易','D56.jpg',0,-111600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:47:44','2020-09-25 16:22:27'),
+(-55,'姐メǎyイǎη','D55.jpg',0,-121200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:31:57','2020-09-25 16:22:27'),
+(-54,'??参赛人??','D54.jpg',0,-153200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:09:36','2020-09-25 16:22:27'),
+(-53,'?命运?','D53.jpg',0,-333600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:37:07','2020-09-25 16:22:27'),
+(-52,' 巴拉提','D52.jpg',0,-83600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 17:33:28','2020-09-25 16:22:27'),
+(-51,'哥んùℳāじi K','D51.jpg',0,-193200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 13:09:31','2020-09-25 16:22:27'),
+(-50,'爱就爱不爱就滚','D50.jpg',0,-135200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:20:02','2020-09-25 16:22:27'),
+(-49,'*んびℳðℜไℳ*','D49.jpg',0,-231200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 07:24:21','2020-09-25 16:22:27'),
+(-48,' oZHaN%$','D48.jpg',0,-94000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:11:30','2020-09-25 16:22:27'),
+(-47,'艾力。','D47.jpg',0,-239600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:36:48','2020-09-25 16:22:27'),
+(-46,'乃再尔','D46.jpg',0,-236400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 12:09:47','2020-09-25 16:22:27'),
+(-45,'冰冻的心','D45.jpg',0,-129200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:20:41','2020-09-25 16:22:27'),
+(-44,'阿卜杜热合曼','D44.jpg',0,-227200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 01:31:38','2020-09-25 16:22:27'),
+(-43,'XOHYIGI','D43.jpg',0,-195200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 23:19:52','2020-09-25 16:22:27'),
+(-42,'βᎯི྆ℜǐβΙℜ','D42.jpg',0,-180000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:43:21','2020-09-25 16:22:27'),
+(-41,'ÐÉしМч ～Rατ','D41.jpg',0,-216400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:21:35','2020-09-25 16:22:27'),
+(-40,'怀念??','D40.jpg',0,-130400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:50:05','2020-09-25 16:22:27'),
+(-39,'亚库普江','D39.jpg',0,-144800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:22:01','2020-09-25 16:22:27'),
+(-38,'?ARZU? ','D38.jpg',0,-176800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:13:40','2020-09-25 16:22:27'),
+(-37,'abdusalam','D37.jpg',0,-106000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:29:44','2020-09-25 16:22:27'),
+(-36,'Ab duxu kur ','D36.jpg',0,-194400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:12:19','2020-09-25 16:22:27'),
+(-35,'艾力','D35.jpg',0,-185600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 03:38:51','2020-09-25 16:22:27'),
+(-34,'忘了她吧！','D34.jpg',0,-202400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:50:14','2020-09-25 16:22:27'),
+(-33,'R','D33.jpg',0,-206400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:05:26','2020-09-25 16:22:27'),
+(-32,'渣男?','D32.jpg',0,-262800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:27:29','2020-09-25 16:22:27'),
+(-31,'小䤵','D31.jpg',0,-164800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 18:57:40','2020-09-25 16:22:27'),
+(-30,'无所胃','D30.jpg',0,-127200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 14:08:14','2020-09-25 16:22:27'),
+(-29,'ǎℳℜîKîℳミ?','D29.jpg',0,-194800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:51:15','2020-09-25 16:22:27'),
+(-28,'t ~  SITIDIO','D28.jpg',0,-214800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 10:32:53','2020-09-25 16:22:27'),
+(-27,'身边没有你','D27.jpg',0,-172400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:59:47','2020-09-25 16:22:27'),
+(-26,'赛皮丁','D26.jpg',0,-202000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:21:54','2020-09-25 16:22:27'),
+(-25,'热孜万那木','D25.jpg',0,-154800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:22:16','2020-09-25 16:22:27'),
+(-24,'Nurbiya','D24.jpg',0,-168800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:14:25','2020-09-25 16:22:27'),
+(-23,'Nigar','D23.jpg',0,-221200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 00:26:12','2020-09-25 16:22:27'),
+(-22,'Muyassar','D22.jpg',0,-219600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 05:42:45','2020-09-25 16:22:27'),
+(-21,'Nigar','D21.jpg',0,-226400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:49:16','2020-09-25 16:22:27'),
+(-20,'Music 为','D20.jpg',0,-242400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 11:51:51','2020-09-25 16:22:27'),
+(-19,'~màgrùr~','D19.jpg',0,-190800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:19:49','2020-09-25 16:22:27'),
+(-18,'萌萌哒','D18.jpg',0,-225200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:00:53','2020-09-25 16:22:27'),
+(-17,'jahan kazdi ','D17.jpg',0,-193200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 21:22:16','2020-09-25 16:22:27'),
+(-16,'んi丫aし','D16.jpg',0,-235200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 18:57:33','2020-09-25 16:22:27'),
+(-15,'ini?','D15.jpg',0,-210400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 09:28:37','2020-09-25 16:22:27'),
+(-14,'iskandar','D14.jpg',0,-286800,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:23:11','2020-09-25 16:22:27'),
+(-13,'Hasani','D13.jpg',0,-131600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:11:20','2020-09-25 16:22:27'),
+(-12,'GUZAL DUNYA','D12.jpg',0,-126400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 22:27:21','2020-09-25 16:22:27'),
+(-11,'鮕鯏銤熱','D11.jpg',0,-163600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:15:37','2020-09-25 16:22:27'),
+(-10,'Eღ₁₃¹⁴ღ爱ღ__R','D10.jpg',0,-197600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 16:13:47','2020-09-25 16:22:27'),
+(-9,'对方正在等你.........','D9.jpg',0,-273200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 17:37:31','2020-09-25 16:22:27'),
+(-8,'CARPE DIEM','D8.jpg',0,-255200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:10:47','2020-09-25 16:22:27'),
+(-7,'berdanom','D7.jpg',0,-184000,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:16:03','2020-09-25 16:22:27'),
+(-6,'Babyboy','D6.jpg',0,-159600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-03 20:27:10','2020-09-25 16:22:27'),
+(-5,'BëBëYiM','D5.jpg',0,-237600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 20:19:53','2020-09-25 16:22:27'),
+(-4,'【AKPAR】','D4.jpg',0,-295200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-05 19:21:03','2020-09-25 16:22:27'),
+(-3,'爱清DISA头痛','D3.jpg',0,-138400,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:57:49','2020-09-25 16:22:27'),
+(-2,'爱你可爱','D2.jpg',0,-193600,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 14:53:15','2020-09-25 16:22:27'),
+(-1,'艾力江','D1.jpg',0,-127200,0,0,0,'{}','{}','[]',NULL,NULL,'2020-11-04 19:04:43','2020-09-25 16:22:27');
+
+/*Table structure for table `player_cue` */
+
+DROP TABLE IF EXISTS `player_cue`;
+
+CREATE TABLE `player_cue` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `player_id` int DEFAULT NULL COMMENT '玩家id',
+  `cue_id` int DEFAULT NULL COMMENT '球杆id',
+  `star` int DEFAULT NULL COMMENT '星级',
+  `damage_time` bigint DEFAULT NULL COMMENT '球杆寿命',
+  `isuse` int DEFAULT NULL COMMENT '是否使用中',
+  `defend` json DEFAULT NULL COMMENT '球杆维护情况',
+  `defend_times` int DEFAULT NULL COMMENT '维护次数',
+  `defend_day` bigint DEFAULT NULL COMMENT '维护天数',
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `player_cue` */
+
+/*Table structure for table `role` */
+
+DROP TABLE IF EXISTS `role`;
+
+CREATE TABLE `role` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `role_id` int DEFAULT NULL COMMENT '角色id',
+  `player_id` int DEFAULT NULL COMMENT '玩家id',
+  `isuse` int DEFAULT NULL COMMENT '是否使用',
+  `exp` int DEFAULT NULL COMMENT '经验',
+  `update_time` datetime DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `role` */
+
+/*!50106 set global event_scheduler = 1*/;
+
+/* Event structure for event `e_log` */
+
+/*!50106 DROP EVENT IF EXISTS `e_log`*/;
+
+DELIMITER $$
+
+/*!50106 CREATE DEFINER=`root`@`localhost` EVENT `e_log` ON SCHEDULE EVERY 1 MONTH STARTS '2020-09-18 11:46:00' ON COMPLETION PRESERVE ENABLE DO call create_log() */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `create_log` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `create_log` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `create_log`()
+BEGIN
+	DECLARE i INT;
+	SET i=0;
+	WHILE i<12 DO  
+	    SET @sql_create_log = CONCAT( 
+	'CREATE TABLE IF NOT EXISTS  billiard_log_', DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL i MONTH),'%Y%m'),  
+	"(  
+	 `id` bigint NOT NULL AUTO_INCREMENT,
+	  `room_no` int DEFAULT NULL COMMENT '房间号',
+	  `chang` int DEFAULT NULL COMMENT '场次编号',
+	  `player1` int DEFAULT NULL COMMENT '玩家1-id',
+	  `player2` int DEFAULT NULL COMMENT '玩家1-id',
+	  `player3` int DEFAULT NULL COMMENT '玩家1-id',
+	  `money_type` int DEFAULT NULL COMMENT '货币类型',
+	  `total_cue` int DEFAULT NULL COMMENT '总杆数',
+	  `double_times` int DEFAULT NULL COMMENT '加倍次数',
+	  `ai_money` int DEFAULT NULL COMMENT 'ai输赢',
+	  `fee` int DEFAULT NULL COMMENT '总台费',
+	  `game_time` datetime DEFAULT NULL COMMENT '游戏时间',
+	  PRIMARY KEY (`id`)
+	) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+	");  
+  
+	PREPARE sql_create_log FROM @sql_create_log;     
+	EXECUTE sql_create_log;  
+	SET i=i+1;
+	END WHILE;
+	
+	END */$$
+DELIMITER ;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
